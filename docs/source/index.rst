@@ -21,3 +21,4 @@ Contents
    bot_basic
    advanced
    api
+   other_resource

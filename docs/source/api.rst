@@ -1,9 +1,4 @@
-API
-===
+Lua API
+=========
 
 
-
-.. autosummary::
-   :toctree: generated
-
-   WAND
