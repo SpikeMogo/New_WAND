@@ -8,9 +8,7 @@ Welcome to WAND documentation!
 Check out the :doc:`get_started` section for further information, including
 how to :ref:`installation` the bot.
 
-.. note::
 
-   This project is 
 
 Contents
 --------
@@ -22,3 +20,14 @@ Contents
    advanced
    api
    other_resource
+   faq
+
+
+.. note::
+
+	Please join our discord server 
+
+
+.. warning::
+	
+	Please don't ...

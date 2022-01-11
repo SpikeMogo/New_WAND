@@ -16,6 +16,6 @@ To
 
 
 
-Read Bmp
+Read bmp
 --------------------
 To use 
