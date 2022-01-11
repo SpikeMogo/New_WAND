@@ -22,15 +22,15 @@ Lua API
 
 		.. code-block:: text
 
-			mobs
+			mobs (table)
+			├── mob (table)
+			│   ├── x (int)
+			│   ├── y (int)
+			│   └── invisible (bool)
 			├── mob
 			│   ├── x
 			│   ├── y
-			│   └── invisble
-			├── mob
-			│   ├── x
-			│   ├── y
-			│   └── invisble
+			│   └── invisible
 			│ 
 			│ 
 
