@@ -1,7 +1,7 @@
 Welcome to WAND documentation!
 ===================================
 
-**WAND** (/lu'make/) is a **Free** legit bot for old maple lovers
+**WAND** is a **Free** legit bot for old maple lovers
 
 
 
@@ -10,7 +10,7 @@ how to :ref:`installation` the project.
 
 .. note::
 
-   This project is under active development.
+   This project is 
 
 Contents
 --------
