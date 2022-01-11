@@ -18,15 +18,6 @@ To use WAND, first .:
 Install
 ----------------
 
-To retrieve a list of 
-
-.. autofunction:: ingredients
-
-The ``kind`` parameter 
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
 
 >>> i
 >>> l
