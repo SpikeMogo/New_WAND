@@ -1,18 +1,20 @@
 Usage
 =====
 
-.. _installation:
+.. _Gather files:
 
-Installation
+Gather files
 ------------
 
-To use Lumache, first install it using pip:
+To use WAND, first .:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ wand.dll
 
-Creating recipes
+
+.. _installation:
+Installation
 ----------------
 
 To retrieve a list of random ingredients,
@@ -32,3 +34,9 @@ For example:
 >>> lumache.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
 
+
+
+.. _Run:
+Run
+----------------
+To run WAND:
