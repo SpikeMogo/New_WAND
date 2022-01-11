@@ -5,8 +5,8 @@ Welcome to WAND documentation!
 
 
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Check out the :doc:`get_started` section for further information, including
+how to :ref:`installation` the bot.
 
 .. note::
 
@@ -16,5 +16,8 @@ Contents
 --------
 
 .. toctree::
-   usage
+   get_started
+   use_script
+   bot_basic
+   advanced
    api

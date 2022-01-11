@@ -1,7 +1,7 @@
-Usage
-=====
+Get started
+===============
 
-.. _Gather files:
+.. _gather_files:
 
 Gather files
 ------------
@@ -14,7 +14,8 @@ To use WAND, first .:
 
 
 .. _installation:
-Installation
+
+Install
 ----------------
 
 To retrieve a list of 
@@ -27,13 +28,12 @@ The ``kind`` parameter
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+>>> i
+>>> l
 
 
 .. _Run:
+
 Run
 ----------------
 To run WAND:
