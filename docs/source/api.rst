@@ -334,8 +334,6 @@ Hack
 
 .. function:: DisableAllHacks()
 
-.. function:: LuaTestFunc()
-
 .. function:: MapRush()
 
 
@@ -344,6 +342,50 @@ Hack
 
 Utility
 ^^^^^^^^^^^
+
+.. function:: Delay(arg1)
+	
+	:param arg1: millisecond
+	:type arg1: integer
+	:return: none
+
+	:example:
+		.. code-block:: lua
+
+			-- lua thread sleeps for 1 sec
+			Delay(1000)
+
+---------------------------------------
+
+.. function:: SendPacket(arg1)
+
+	:param arg1: raw packet
+	:type arg1: string
+	:return: none
+	:example:
+		.. code-block:: lua
+
+			-- change to channel 2
+			SendPacket("27 00 01 00 00 00 00")
+
+---------------------------------------
+
+
+.. function:: RecvPacket(arg1)
+
+	:param arg1: raw packet
+	:type arg1: string
+	:return: none
+	:example:
+		.. code-block:: lua
+
+			-- Buff Magic Guard Client-side
+			RecvPacket("20 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00
+			 00 28 00 6B 88 1E 00 80 1A 06 00 00 00 00 00 00 28 00 00 00")
+
+	:note: 
+		* This function posts a packet to client, so server will not know
+		* If you use this function for buffing, added buff will never die. However, this doesn't work for some buffs and may be risky for att-adding buffs
 
 .. function:: AssignAP()
 
@@ -362,33 +404,6 @@ Utility
 .. function:: RemoveBlockPacket()
 
 .. function:: InsertBlockPacket()
-
-.. function:: RecvPacket()
-
-.. function:: Delay(arg1)
-
-.. function:: SendPacket(arg1)
-
-	:param arg1: raw packet
-	:type arg1: string
-	:return: none
-	:example:
-		.. code-block:: lua
-
-			-- change to channel 2
-			SendPacket("27 00 01 00 00 00 00")
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
