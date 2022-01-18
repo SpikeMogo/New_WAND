@@ -6,11 +6,11 @@ Get started
 Gather files
 ------------
 
-To use WAND, first .:
+First, download the whole :download:`Release <../../Release>` folder.
 
-.. code-block:: console
 
-   (.venv) $ wand.dll
+
+
 
 
 .. _installation:
@@ -21,6 +21,10 @@ Install
 
 >>> i
 >>> l
+
+Injection
+----------------
+
 
 
 .. _Run:
