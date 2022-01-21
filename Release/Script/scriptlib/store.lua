@@ -106,14 +106,13 @@ function module.Check()
 
 	if (os.clock()-__LastInventoryCheck)/60>= module.CheckInventoryInterval and global.IfStore==false then	
 		StopMove()
-		RefreshInventory({"Equip","Use","Etc","Cash"})
-		Inventory = GetFullInventory({"Equip","Use","Etc","Cash"})
+		RefreshInventory({"Equip","Use","Etc"})
+		Inventory = GetFullInventory({"Equip","Use","Etc"})
 		local ne=global.length(Inventory.Equip)
 		local nu=global.length(Inventory.Use)
 		local nc=global.length(Inventory.Etc)
-		local ns=global.length(Inventory.Cash)
 		
-		print(string.format("Inventory Updates: [%d equips], [%d use], [%d etc], [%d cash] ",ne, nu, nc, ns))
+		print(string.format("Inventory Updates: [%d equips], [%d use], [%d etc]",ne, nu, nc))
 		if ne>=module.SellWhenEquipsMoreThan then
 			print("Need to sell Inventory, go to store")
 			global.IfStore=true
