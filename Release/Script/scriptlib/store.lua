@@ -59,7 +59,7 @@ end
 
 local module = 
 {
-	IfStore = 1,  
+	IfStore = true,  
 	CheckInventoryInterval = 4, 			-- check the equip inventory every 5 min; if the equip is full, go to the store
 	StoreMap=100000102,
 	NPCLocation = {-213, 182},
@@ -70,6 +70,7 @@ local module =
 	Potion =
 	{
 		IfBuyPots=true,			
+		IfAutoPot=true,
 		HpOnKey = vk.VK_DELETE,  	-- only support QuickSlot (8 keys in total)
 		MpOnKey = vk.VK_END,		-- only support QuickSlot (8 keys in total)
 		FeedDelay=0.2,  			-- Auto pot delay in sec

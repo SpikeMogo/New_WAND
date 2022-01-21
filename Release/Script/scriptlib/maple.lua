@@ -50,6 +50,7 @@ local module =
     --
     Buffs =
     {
+        IfAutoBuff=true,
         CanBuffOnRope=false,
         ReBuffAdvanceSec = 5, --rebuff x sec before buff dies
         Buff=
@@ -96,15 +97,17 @@ local __MapStayTick   = os.clock()
 local function AutoPotsAndBuff(Player)
 
     --auto pot
-    if Player.hp<store.Potion.AutoHpThreshold and os.clock()-__LastHpTick>store.Potion.FeedDelay then
-        SendKey(store.Potion.HpOnKey) __LastHpTick=os.clock()
-    end
-    if Player.mp<store.Potion.AutoMpThreshold and os.clock()-__LastMpTick>store.Potion.FeedDelay then
-        SendKey(store.Potion.MpOnKey) __LastMpTick=os.clock()
+    if store.Potion.IfAutoPot==true then
+        if Player.hp<store.Potion.AutoHpThreshold and os.clock()-__LastHpTick>store.Potion.FeedDelay then
+            SendKey(store.Potion.HpOnKey) __LastHpTick=os.clock()
+        end
+        if Player.mp<store.Potion.AutoMpThreshold and os.clock()-__LastMpTick>store.Potion.FeedDelay then
+            SendKey(store.Potion.MpOnKey) __LastMpTick=os.clock()
+        end
     end
 
     --check the buffs
-    if global.IfHunt==false then return end
+    if global.IfHunt==false or module.Buffs.IfAutoBuff==false then return end
     local Buffs = GetBuffandDebuff()
     for i=1,global.length(module.Buffs.Buff) do
 
@@ -236,11 +239,12 @@ local function AlertAndHide(Player)
     local MobAlert = false
     for k, UID in pairs(MobUID) do
         for _, UID2 in pairs(module.AlertWhenMobAppears) do
-            MobAlert=true
+            if UID==UID2 then MobAlert=true end
         end
     end
-    if MobAlert and os.clock()-__WarningTick<AlertTime then
+    if MobAlert and os.clock()-__PlaySoundTick>=5 then
         PlayWav()
+        print("Strange Mob ID!!!")
         __PlaySoundTick=os.clock()
     end
 

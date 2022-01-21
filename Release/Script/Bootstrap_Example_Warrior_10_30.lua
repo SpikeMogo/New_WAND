@@ -32,16 +32,16 @@ local walk   = require('walk')
 maple.MaxRunTime = 3000   --max run time in minute 
 maple.HuntMapList =     -- append hunt map ID, and SafeSpot here
     {
-        {ID=100030000,SafeSpot={-129, -265}},
-        {ID=100020000,SafeSpot={-61,  65}},
+        {ID=100020000,SafeSpot={6, 65}},
+        {ID=100030000,SafeSpot={-4096, -63}},
     } 
-maple.CCAtSafeSpot = {On = true, RandomCC = false, SwitchMapAfterCC=true}  --CC at SafeSpot
-maple.SwitchMapAfterMin = 60 -- switch hunt map after x min, if you have more than one map in HuntMapList
-maple.TotalChannel = 3      -- total channel 
+maple.CCAtSafeSpot = {On = true, RandomCC = true, SwitchMapAfterCC=true}  --CC at SafeSpot
+maple.SwitchMapAfterMin = 120 -- switch hunt map after x min, if you have more than one map in HuntMapList
+maple.TotalChannel = 20      -- total channel 
 --
 maple.AlertTimeSec = 20        -- when someone stay in map for more than x sec, go to safespot
 maple.PlayerWhiteList = {"myfriend"}        -- player white list, you can put your partner's ign  here
-maple.AlertWhenMobAppears = {9999999}       -- alert when some strange mob ID appears 
+maple.AlertWhenMobAppears = {1234567}       -- alert when some strange mob ID appears 
 --
 maple.IfMapRushToHunt=false         --use maprush to hunt map
 maple.IfMapRushToStore=false        --use maprush to store
@@ -49,7 +49,7 @@ maple.MapRushMethod = 0             --maprush method: 0 = spawn control; 1 = pac
 maple.IfUseScrollToTown=false       -- use return scroll back to town 
 ReturnScrollID = 2030000            -- return scroll item ID
 ------
-maple.StopAtLevel = 60              -- stop at level = x
+maple.StopAtLevel = 30              -- stop at level = x
 maple.AutoAp = {str=4, dex=1, int =0, luk = 0}  --auto ap
 ------
 maple.Movement=
@@ -66,7 +66,7 @@ maple.Movement=
 ------
 maple.Buffs =
     {
-        IfAutoBuff=true,     
+        IfAutoBuff=false,     
         CanBuffOnRope=true,             -- if you can buff on rope
         ReBuffAdvanceSec = 5,           --rebuff x sec before buff dies
         Buff=
@@ -92,10 +92,10 @@ maple.MissGodModeRate = -1  -- rate : x out of 10 will miss, -1 = disable
 store.IfStore = true                         -- if go to store
 store.CheckInventoryInterval = 4         -- check the equip inventory every 5 min; if the equip is full, go to the store
 store.StoreMap=100000102                    
-store.NPCLocation = {-213, 182}          --stand close the npc, make sure you can open the NPC chat by key-pressing
+store.NPCLocation = {-351, 224}          --stand close the npc, make sure you can open the NPC chat by key-pressing
 store.NPCChatKey = vk.VK_SPACE            
-store.SellWhenEquipsMoreThan=15         
-store.CCAfterSell= {On = false, RandomCC = false}     
+store.SellWhenEquipsMoreThan=55         
+store.CCAfterSell= {On = true, RandomCC = false}     
 store.Potion =
    {
       IfBuyPots=true,      
@@ -103,8 +103,8 @@ store.Potion =
       HpOnKey = vk.VK_DELETE,    -- only support QuickSlot (8 keys in total)
       MpOnKey = vk.VK_END,       -- only support QuickSlot (8 keys in total)
       FeedDelay=0.2,             -- Auto pot delay in sec
-      AutoHpThreshold=1000,      
-      AutoMpThreshold=300,          
+      AutoHpThreshold=300,      
+      AutoMpThreshold=50,          
       BuyPotionList=
       {
          HP={ID=2000001,BuyNum=600, LowerLimit = 20},  -- go the store if pot is below the LowerLimit
@@ -137,7 +137,7 @@ hunt.Attack =
     {
         HasOrient = true,   
         Key =  vk.VK_CONTROL, --single attack
-        Key2 = vk.VK_CONTROL, --group attack  
+        Key2 = vk.VK_A, --group attack  
         MobAttack = 1,        -- attack when mobs near you >= x
         MobFind = 1,          -- find mobs in a group of x
         Range = {
@@ -166,7 +166,7 @@ loot.MustPickType =  -- you can put "Mesos", "Equip", "Use", "Setup" "Etc", "Cas
     }
 loot.MustPickID =  --  append to this list; must loot this item;
     {
-        4001207,
+        999999999,
     }
     LootAttempts=10  -- if it takes x attempts to loot one item, give up, and add that location to Exception
 

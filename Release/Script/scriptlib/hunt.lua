@@ -194,7 +194,7 @@ function module.Run()
     end
 
     for k, mob in pairs(Mobs) do
-        if  mob.invisble==false then
+        if  mob.invisible==false then
             moblist[c]={}       
             moblist[c].x=mob.x
             moblist[c].y=mob.y
