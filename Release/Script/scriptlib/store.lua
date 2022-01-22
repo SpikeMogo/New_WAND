@@ -106,6 +106,7 @@ function module.Check()
 
 	if (os.clock()-__LastInventoryCheck)/60>= module.CheckInventoryInterval and global.IfStore==false then	
 		StopMove()
+		Delay(100)
 		RefreshInventory({"Equip","Use","Etc"})
 		Inventory = GetFullInventory({"Equip","Use","Etc"})
 		local ne=global.length(Inventory.Equip)
