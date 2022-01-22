@@ -218,19 +218,19 @@ local function AlertAndHide(Player)
         PeopleHere=true
     else
         PeopleHere=false
-        if people ~=nil then
+    end
+
+    --play alert sound
+    if AlertTime>0 and os.clock()-__PlaySoundTick>=5 and PeopleHere==true and os.clock()-__WarningTick<AlertTime then
+        PlayWav()
+        print("Someone is here!!!")
+         if people ~=nil then
             str = "People: "
             for k, p in pairs(people) do
                 str = str.."["..p.name.."] "
             end
             print(str)
         end
-        
-    end
-
-    --play alert sound
-    if AlertTime>0 and os.clock()-__PlaySoundTick>=5 and PeopleHere==true and os.clock()-__WarningTick<AlertTime then
-        PlayWav()
         __PlaySoundTick=os.clock()
     end
 
