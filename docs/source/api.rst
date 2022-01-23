@@ -313,6 +313,7 @@ Game Play
 	:note:
 		* ``portal.type`` =  ``"manual"`` or ``"game"``. ``"manual"`` means this portal is added manually.
 		* use ``portal.type`` and  ``portal.portalName`` together, you can customize the connections you added, e.g. taking the taxi.
+		* About the manual portals, check :ref:`supplement_maplist`.
 
 ---------------------------------------
 
