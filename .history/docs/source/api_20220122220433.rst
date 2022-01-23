@@ -247,28 +247,27 @@ Game Play
 ---------------------------------------
 
 .. function:: GetBuffandDebuff()
-
-	:return: tables of buffs and debuffs
+		:return: tables of buffs and debuffs
 
 		.. code-block:: text
 
 			│
 			├── Buff (table)
 			│   ├── Buff
-			│   │   ├──ID (int)
-			│   │   └──time_remain (float, in second)
-			│   │ 
+			│	│   ├──ID (int)
+			│	│   └──time_remain (double,second)
+			│ 	│ 
 			│   ├── Buff
-			│   │   ├──ID (int)
-			│   │   └──time_remain (float, in second)
+			│	│   ├──ID (int)
+			│	│   └──time_remain (double,second)
 			│
 			│
 			└── Debuff (table)
-				├── Debuff
-				│   └──name (string)
+			    ├── Debuff
+				│	└──name (string)
 				│ 
-				├── Debuff
-				│   └──name (string)
+			    ├── Debuff
+			 	│  └──name (string)
 			  
 			...
 
@@ -277,42 +276,17 @@ Game Play
 
 			-- print player' buff
 			Buffs = GetBuffandDebuff()
-			for k, buff in pairs(Buffs.Buff) do
-				print(buff.ID," time_remain: ",buff.time_remain)
+			for k, buff in pairs(Players) do
+				print(player.name)
 			end
 
 	:note:
-		* The names of debuffs: ``"seal"``, ``"slow"``, ``"stun"``, ``"curse"``, ``"seduce"``, ``"poison"``, ``"weaken"``, ``"zombify"``, ``"confuse"``, ``"darkness"``.
+		* This function relies on decoding packets, it's recommended that you CC after the every injection of WAND to setfield. (i.e. If WAND doesn't show correct map name on the UI, that means you need to refresh by changing channel)
 
 
 ---------------------------------------
 
-.. function:: FindNextPortal(arg1)
-
-	:param arg1: destination map ID
-	:type arg1: int
-
-	:return: a portal object
-
-		.. code-block:: text
-
-				portal (table)
-				├── nextMap (int)
-				├── x (int)
-				├── y (int)
-				├── portalName (string)
-				└── type (string)
-
-	:example: 
-		.. code-block:: lua
-
-			-- print the portal you should take at current map to Hunting Ground I
-			portal = FindNextPortal(104040000)
-			print(string.format("take the portal at: [%d,%d]",portal.x,portal.y))
-
-	:note:
-		* ``portal.type`` =  ``"manual"`` or ``"game"``. ``"manual"`` means this portal is added manually.
-		* use ``portal.type`` and  ``portal.portalName`` together, you can customize the connections you added, e.g. taking the taxi.
+.. function:: FindNextPortal()
 
 ---------------------------------------
 
@@ -337,81 +311,6 @@ Game Play
 ---------------------------------------
 
 .. function:: GetFullInventory()
-
-	:param arg1: a table of string, contains any of these four options: ``"Equip"``, ``"Use"``, ``"Etc"``, ``"Cash"``
-	:type arg1: table
-
-	:return: inventory info according to the input
-
-		.. code-block:: text
-
-			│
-			├── tab (table)
-			│   ├── Item (table)
-			│   │   ├──ID (int)
-			│   │   └──...
-			│   │ 
-			│   ├── Item
-			│   │   ├──ID 
-			│   │   └──...
-			│
-			│
-			└── tab 
-			    ├── Item
-			    │   ├──ID
-			    │   └──...
-			   ...
-
-		if tab = ``Equip``
-
-		.. code-block:: text
-
-			Item
-			├── ID
-			├── Name
-			├── Avail_Upgrades
-			├── Scrolled
-			├── Str
-			├── Dex
-			├── Int
-			├── Luk
-			├── Hp
-			├── Mp
-			├── Watk
-			├── Matk
-			├── Wdef
-			├── Mdef
-			├── Acc
-			├── Avoid
-			├── Speed
-			└── Jump
-
-		if tab = ``Use`` or ``Etc`` or ``Cash``
-
-		.. code-block:: text
-
-			Item
-			├── ID
-			├── Name
-			└── Num
-
-
-
-
-	:example:
-		.. code-block:: lua
-
-			-- Refresh
-			RefreshInventory({"Equip", "Use", "Etc"})
-
-			-- Get
-			Inventory = GetFullInventory({"Equip", "Use", "Etc"})
-			for slot,item in pairs(Inventory.Equip) do
-				print("Slot: ", slot, " Name: ", item.Name)
-
-	:note:
-		* ``GetFullInventory()`` should be paired with ``RefreshInventory()`` with same inputs
-		* Depending on server, the results may not be accurate
 
 ---------------------------------------
 
