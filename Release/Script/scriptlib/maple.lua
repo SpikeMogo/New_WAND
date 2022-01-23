@@ -84,6 +84,8 @@ local PeopleHere=false
 local OldLevel = 300
 local UsedScroll = false
 local MissMode = false
+local __runtimelast = -20
+
 
 local __LastMoveTick =  os.clock()
 local __LastHpTick   =  os.clock()
@@ -91,6 +93,7 @@ local __LastMpTick   =  os.clock()
 local __WarningTick  =  os.clock()
 local __PlaySoundTick = os.clock()
 local __MapStayTick   = os.clock()
+
 
 
 
@@ -124,7 +127,7 @@ local function AutoPotsAndBuff(Player)
         if Found==false or (Found and time_remain<=module.Buffs.ReBuffAdvanceSec) then
             if module.Buffs.CanBuffOnRope==true or Player.OnRope==false then
                 SendKey(module.Buffs.Buff[i].key,2)
-                print(string.format("Trying to Add Buff, ID = : %d",module.Buffs.Buff[i].ID))
+                print(string.format("Trying to Add Buff, ID = %d",module.Buffs.Buff[i].ID))
                 Delay(400)
             end
         end
@@ -364,6 +367,12 @@ local function CheckMapOwnership()
         __MapStayTick = os.clock()
     end
 
+    local runtime=(os.clock()-Starttime)/60
+    if runtime-__runtimelast>10 then
+        print("Script Run Time: ",math.floor(runtime)," mins")
+        __runtimelast=runtime
+    end
+
 end
 
 
@@ -444,7 +453,6 @@ function module.Run()
         AutoPotsAndBuff(Player)
 
         HuntLootOrShopping(Player)
-
 
 
         --end of loop

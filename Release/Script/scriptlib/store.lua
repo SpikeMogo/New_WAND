@@ -198,7 +198,7 @@ function module.Sell(Player)
 				if Loc~=-1 then SendPacket(BuyPacket(Loc,ID,Num)) end
 			end
 		end
-
+		Delay(500)
 		SendPacket("3D 00 03")
 		print("Send Close Store")
 		Delay(1000)
