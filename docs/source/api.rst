@@ -246,7 +246,7 @@ Game Play
 
 ---------------------------------------
 
-.. function:: GetBuffandDebuff()
+.. function:: Buffs = GetBuffandDebuff()
 
 	:return: tables of buffs and debuffs
 
@@ -287,7 +287,7 @@ Game Play
 
 ---------------------------------------
 
-.. function:: FindNextPortal(arg1)
+.. function:: portal = FindNextPortal(arg1)
 
 	:param arg1: destination map ID
 	:type arg1: int
@@ -337,7 +337,7 @@ Game Play
 
 ---------------------------------------
 
-.. function:: GetFullInventory()
+.. function:: Inventory = GetFullInventory()
 
 	:param arg1: a table of string, contains any of these four options: ``"Equip"``, ``"Use"``, ``"Etc"``, ``"Cash"``
 	:type arg1: table
@@ -416,17 +416,106 @@ Game Play
 
 ---------------------------------------
 
-.. function:: GetMapDimension()
+.. function:: size = GetMapDimension()
+
+	:return: a size object
+
+		.. code-block:: text
+
+				size (table)
+				├── left (int)
+				├── right (int)
+				├── top (int)
+				└── bottom (int)
+
 
 ---------------------------------------
 
-.. function:: GetMapStructure()
+.. function:: map = GetMapStructure()
+
+	:return: tables of footholds and ropes
+
+		.. code-block:: text
+
+			│
+			├── Foothold (table)
+			│   ├── foothold
+			│   │   ├──ID (int)
+			│   │   ├──x1 (int)
+			│   │   ├──y1 (int)
+			│   │   ├──x2 (int)
+			│   │   └──y2 (int)
+			│   │ 
+			│   ├── foothold
+			│   │   ├──ID
+			│       ├──x1
+			│       ├──y1
+			│       ├──x2
+			│       └──y2
+			│
+			│
+			└── RopeLadder (table)
+				├── Rope
+				│   ├──ID (int)
+			    │   ├──x  (int)
+			    │   ├──y1 (int)
+			    │   └──y2 (int)
+				│ 
+				├── Rope
+				│   ├──ID (int)
+			    │   ├──x  (int)
+			    │   ├──y1 (int)
+			    │   └──y2 (int)
+			  
+			...
+
+	:note:
+		* This function returns the structure of current map.
+		* Ropes and ladders are vertical, so only one value ``x`` is return.
 
 
-.. function:: ItemLocationInStore()
+.. function:: n = ItemLocationInStore(arg1)
+
+	:param arg1: item ID
+	:type arg1: int 
+
+	:return:  location of item in the store
 
 
-.. function:: NumOnQuickSlot()
+	:note:
+		* Item list is loaded at ``open_store`` action. Use this function after store is opened
+		* Location of item starts with ``0``
+
+
+.. function:: n = NumOnQuickSlot(arg1)
+
+	:param arg1: key code
+	:type arg1: int 
+
+	:return:  number of item on the key
+
+
+
+	:example:
+		.. code-block:: lua
+
+			-- Get item number on the Delete key
+			print(NumOnQuickSlot(46))
+
+	:note:
+		* This functions only works for eight ``quick slots``
+			.. code-block:: text
+			
+				-----------------------------
+				| Shift |  Ins  | Hm  | Pup |
+				-----------------------------
+				| Ctrl  |  Del  | End | Pdn |
+				-----------------------------
+
+		* Virtual-Key_ Codes: 
+			.. _Virtual-Key: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+
+
 
 .. _input:
 
@@ -435,12 +524,87 @@ Input
 
 .. function:: SendKey(arg1, arg2=1)
 
+	:param arg1: key code
+	:type arg1: int 
+
+	:param arg2: repeat, default = ``1`` 
+	:type arg2: int 
+
+	:return:  none
+
+
+
+	:example:
+		.. code-block:: lua
+
+			-- Send space key 
+			SendKey(32)
+
+			-- Send Up key four times
+			SendKey(38, 4)
+
+	:note:
+		* This function works in ``background``, that means, the maple window doesn't need to be focused. However, background key-press may not be working for some skills. Tests are needed.
+		* Virtual-Key_ Codes: 
+			.. _Virtual-Key: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+
+
+
 .. function:: HoldKey(arg1, arg2)
 
-.. function:: LeftClickOnScreen()
+	:param arg1: key code
+	:type arg1: int 
 
-.. function:: LeftClickOnWindow()
+	:param arg2: state,  ``0`` or ``1`` 
+	:type arg2: int 
 
+	:return:  none
+
+
+	:example:
+		.. code-block:: lua
+
+			-- Hold Left key for 4 sec and release
+			SendKey(37, 1)
+			Delay(4000)
+			SendKey(37, 0)
+
+	:note:
+		* This function only works for ``left``, ``right``, ``up`` and ``down`` keys.
+		* Virtual-Key_ Codes: 
+			.. _Virtual-Key: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+
+
+
+.. function:: LeftClickOnScreen(arg1,arg2)
+	
+	:param arg1: x
+	:type arg1: int 
+
+	:param arg2: y
+	:type arg2: int 
+
+	:return:  none
+
+	:note:
+		* This function works in ``background``
+		* ``(x, y)`` is the position of cursor in screen coordinate.
+
+
+
+.. function:: LeftClickOnWindow(arg1,arg2)
+	
+	:param arg1: x
+	:type arg1: int 
+
+	:param arg2: y
+	:type arg2: int 
+
+	:return:  none
+
+	:note:
+		* This function works in ``background``
+		* ``(x, y)`` is the position of cursor respect to the Maple window (upper-left corner is ``(0,0)``).
 
 
 .. _control:
@@ -449,13 +613,83 @@ Control
 ^^^^^^^^^^^
 
 
-.. function:: MoveTo()
+.. function:: MoveTo(arg1, arg2)
+
+	:param arg1: x
+	:type arg1: int 
+
+	:param arg2: y
+	:type arg2: int 
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			-- move the player
+			while(1) do
+				MoveTo(100,200)
+			end
+
+	:note:
+		* This function walks the player to the position ``(x,y)`` in current map
+		* For continuous movement, this function must be put in a loop.
+
+.. function:: SetMapData(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9)
+
+	:param arg1: Max jump
+	:type arg1: int 
+
+	:param arg2: Step size
+	:type arg2: int 
+
+	:param arg3: Jump key
+	:type arg3: int 
+
+	:param arg4: Magic teleport key
+	:type arg4: int 
+
+	:param arg5: Magic teleport distance
+	:type arg5: int 
+
+	:param arg6: if use teleport skill of Mage
+	:type arg6: bool
+
+	:param arg7: if use in_map portals
+	:type arg7: bool
+
+	:param arg8: if use teleport hack
+	:type arg8: bool
+
+	:param arg9: if jump down tile
+	:type arg9: bool
+
+
+	:note: 
+		* You can tell the bot what's your jump key and what is the teleport skill key if you are Mage
+		* Max jump distance for beginner is normally 80
+		* Step size is around 5 ~ 6
+		* Changing maxjump and stepsize will adjust the player's movement
+		* ``arg8`` : if use teleport hack. This means when path to the target is not found, the bot will try to use ``teleport hack`` to move player. Enable this only when you are confident that teleport hack is safe
+		* Call this function at the beginning of the script, parameters stay effective for all maps during the lifetime of script.
 
 .. function:: StopMove()
 
-.. function:: StopScript()
+	:return:  none
 
-.. function:: SetMapData()
+	:note: 
+
+		* Stop the player's movement
+
+
+.. function:: StopScript()
+	
+	:return:  none
+
+	:note: 
+		* Stop the script
+
+
 
 .. _hack:
 
