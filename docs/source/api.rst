@@ -457,15 +457,15 @@ Game Play
 			└── RopeLadder (table)
 				├── Rope
 				│   ├──ID (int)
-			    │   ├──x  (int)
-			    │   ├──y1 (int)
-			    │   └──y2 (int)
+				│   ├──x  (int)
+				│   ├──y1 (int)
+				│   └──y2 (int)
 				│ 
 				├── Rope
 				│   ├──ID (int)
-			    │   ├──x  (int)
-			    │   ├──y1 (int)
-			    │   └──y2 (int)
+				│   ├──x  (int)
+				│   ├──y1 (int)
+				│   └──y2 (int)
 			  
 			...
 
