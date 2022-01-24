@@ -143,8 +143,8 @@ function module.Sell(Player)
 	if global.Distance(Player.x, Player.y, module.NPCLocation[1], module.NPCLocation[2])<20 then
 		StopMove()
 		Delay(1000)
-		RefreshInventory({"Equip","Use","Etc","Cash"})
-		Inventory = GetFullInventory({"Equip","Use","Etc","Cash"})
+		RefreshInventory({"Equip","Use","Etc"})
+		Inventory = GetFullInventory({"Equip","Use","Etc"})
 		
 		--open store and close the UI
 		

@@ -189,7 +189,7 @@ local function HuntLootOrShopping(Player)
     end
 
     --loot
-    if global.IfLoot then
+    if global.IfLoot and GetMapID()==module.HuntMapList[HuntMapIdx].ID then
         loot.Run()
     end
 
@@ -201,6 +201,8 @@ end
 local function AlertAndHide(Player)
 
     if global.IfStore then return end
+    if GetMapID()~=module.HuntMapList[HuntMapIdx].ID then return end
+
     local people = GetOtherPlayers()
     local count = math.max(global.length(people),GetOtherPlayersCount())
 
@@ -254,7 +256,7 @@ local function AlertAndHide(Player)
 
 
     -- go to safe spot and change channel
-    if PeopleHere==true and os.clock()-__WarningTick>AlertTime and GetMapID()==module.HuntMapList[HuntMapIdx].ID then
+    if PeopleHere==true and os.clock()-__WarningTick>AlertTime then
         global.IfHunt=false
         global.IfLoot=false
         sx = module.HuntMapList[HuntMapIdx].SafeSpot[1]
