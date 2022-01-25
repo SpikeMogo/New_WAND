@@ -613,7 +613,7 @@ Control
 ^^^^^^^^^^^
 
 
-.. function:: MoveTo(arg1, arg2)
+.. function:: n = MoveTo(arg1, arg2)
 
 	:param arg1: x
 	:type arg1: int 
@@ -621,7 +621,7 @@ Control
 	:param arg2: y
 	:type arg2: int 
 
-	:return:  none
+	:return:  n: ``1`` = moving; ``2`` = path_not_found; ``3`` = wrong_map
 
 	:example:
 		.. code-block:: lua
