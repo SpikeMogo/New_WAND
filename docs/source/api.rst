@@ -613,13 +613,16 @@ Control
 ^^^^^^^^^^^
 
 
-.. function:: n = MoveTo(arg1, arg2)
+.. function:: n = MoveTo(arg1, arg2, arg3)
 
 	:param arg1: x
 	:type arg1: int 
 
 	:param arg2: y
 	:type arg2: int 
+
+	:param arg3: type (optional, default = 0)
+	:type arg3: int 
 
 	:return:  n: ``1`` = moving; ``2`` = path_not_found; ``3`` = wrong_map
 
@@ -633,6 +636,7 @@ Control
 
 	:note:
 		* This function walks the player to the position ``(x,y)`` in current map
+		* type = ``1`` means moving to a portal, type = ``2`` means moving to a drop. Using type > 0 will invoke some special treatment in dll (bigger torrence). For most of time in hunting, type can be ignored.
 		* For continuous movement, this function must be put in a loop.
 
 .. function:: SetMapData(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9)
@@ -679,7 +683,7 @@ Control
 
 	:note: 
 
-		* Stop the player's movement
+		* Stop player's movement
 
 
 .. function:: StopScript()
@@ -688,6 +692,8 @@ Control
 
 	:note: 
 		* Stop the script
+		* Call it anywhere in script will stop the Lua thread.
+		
 
 
 
@@ -709,7 +715,6 @@ Hack
 .. function:: MapRush()
 
 
-
 .. _utility:
 
 Utility
@@ -718,7 +723,7 @@ Utility
 .. function:: Delay(arg1)
 	
 	:param arg1: millisecond
-	:type arg1: integer
+	:type arg1: int
 	:return: none
 
 	:example:
@@ -759,23 +764,32 @@ Utility
 		* This function posts a packet to client, so server will not know
 		* If you use this function for buffing, added buff will never die. However, this doesn't work for some buffs and may be risky for att-adding buffs
 
+
+.. function:: RemoveBlockPacket()
+
+.. function:: InsertBlockPacket()
+
+.. function:: ChangeChannel()
+
+
 .. function:: AssignAP()
+
 
 .. function:: ReadInput()
 
 .. function:: FindBMP()
 
-.. function:: PlayWav()
+.. function:: PlayWav(arg1)
 
-.. function:: ChangeChannel()
+	:param arg1: name_of_wav (optional)
+	:type arg1: string
+
 
 .. function:: ReadPointerLua()
 
 .. function:: ReadMultiSignedLua()
 
-.. function:: RemoveBlockPacket()
 
-.. function:: InsertBlockPacket()
 
 
 
