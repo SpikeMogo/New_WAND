@@ -33,7 +33,7 @@ Then Navigate to the **Bot** settings and create the bot, after you create the b
                        
                        
 .. note:: 
-            before proceeding make sure you have created a new server to host the discord bot.
+	before proceeding make sure you have created a new server to host the discord bot.
                        
          then copy the **generated url** down the bottom, paste it into your browser and invite the bot. (sign into Discord on your browser)
          
