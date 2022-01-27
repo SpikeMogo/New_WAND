@@ -1,6 +1,4 @@
-# WAND v2.0
-
-Welcome to Wand 2.0. 
+# WAND v2.0 Introductory  
 
 Wand 1.0 was initially created as a hobby project by **SpikeMogo @ Spike** as he was too lazy to play maple manually. **Hours of grinding ? No way**. Anyway, let's cut to the chase shall we ?
 
