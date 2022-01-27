@@ -894,6 +894,7 @@ Utility
 
 	:note:
 		* Block Packets
+		* Please use this format for the packet: "xxxx xx xx ..." the first two bytes are the Opcode.
 		* It will block any packet that equals or starts with your input string
 
 
