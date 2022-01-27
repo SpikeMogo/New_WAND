@@ -20,7 +20,7 @@ With Wand 2.0, **New Scripts and clearer APIs** are introduced which makes this 
 
 
 ## Documentation
-    [Check our document](https://newwand.readthedocs.io/en/latest/#)
+    [document](https://newwand.readthedocs.io/en/latest/#)
 
 
 ## Disclaimer
