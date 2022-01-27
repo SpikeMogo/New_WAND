@@ -512,7 +512,7 @@ Game Play
 				| Ctrl  |  Del  | End | Pdn |
 				-----------------------------
 
-		* Virtual-Key_ Codes: 
+		* Virtual-Key_ Codes 
 			.. _Virtual-Key: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 
 
@@ -547,7 +547,7 @@ Input
 		* This function calls ``PostMessageA`` (winuser.h), with two consecutive messages: WM_KEYDOWN and WM_KEYUP.
 		* In text box, this function may trigger two key-presses instead of one, if you want to sendkey in maple text box (e.g. chatbox), please use ``SendKey2()`` function
 		* This function works in ``background``, that means, the maple window doesn't need to be focused. However, background key-press may not be working for some skills. Tests are needed.
-		* Virtual-Key_ Codes: 
+		* Virtual-Key_ Codes
 			.. _Virtual-Key: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 
 
@@ -589,7 +589,7 @@ Input
 
 	:note:
 		* This function only works for ``left``, ``right``, ``up`` and ``down`` keys.
-		* Virtual-Key_ Codes: 
+		* Virtual-Key_ Codes 
 			.. _Virtual-Key: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 
 
