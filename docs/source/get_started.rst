@@ -102,6 +102,9 @@ Inject WAND, play around a bit, choose your script and hit run.
 
 	Please check :ref:`supplement_maplist` and learn how to add maplist supplements
 
+.. note::
+
+	Please run client(s) in Windows 7 compatability mode if packet decoder fails to hook
 
 
 Enjoy!
