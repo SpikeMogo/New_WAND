@@ -149,10 +149,12 @@ local function TryAttack(moblist)
         if need_reverse then 
             StopMove()
             if orient == 1 then
-                HoldKey(vk.VK_LEFT, 1)
                 HoldKey(vk.VK_RIGHT,0)
+                SendKey(vk.VK_LEFT)
+                HoldKey(vk.VK_LEFT, 1)
             else
                 HoldKey(vk.VK_LEFT, 0)
+                SendKey(vk.VK_RIGHT)
                 HoldKey(vk.VK_RIGHT,1)                
             end
             Delay(100)

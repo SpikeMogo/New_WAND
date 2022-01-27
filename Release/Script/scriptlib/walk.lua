@@ -18,9 +18,9 @@ local function ManualPort(Player, portal)
     -- chat with NPC and go to regular Sauna
     if portal.portalName=="to_Sauna" then
         for i=1,3 do
-            SendKey(module.NPCChatKey) Delay(300)
+            SendKey(module.NPCChatKey) Delay(500)
         end
-        SendKey(vk.VK_RIGHT) Delay(300)
+        SendKey(vk.VK_RIGHT) Delay(500)
         SendKey(module.NPCChatKey)  Delay(2000)
         return 
     end

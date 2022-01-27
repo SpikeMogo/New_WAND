@@ -214,6 +214,7 @@ function module.Sell(Player)
 				end
 			end
 			ChangeChannel(channel)
+			Delay(2000)
 		end
 
 		global.IfStore=false

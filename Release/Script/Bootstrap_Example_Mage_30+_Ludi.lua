@@ -94,7 +94,7 @@ store.CheckInventoryInterval = 4         -- check the equip inventory every 5 mi
 store.StoreMap=220000002               
 store.NPCLocation = {213, 187}          --stand close the npc, make sure you can open the NPC chat by key-pressing
 store.NPCChatKey = vk.VK_SPACE            
-store.SellWhenEquipsMoreThan=55         
+store.SellWhenEquipsMoreThan=15         
 store.CCAfterSell= {On = false, RandomCC = false}     
 store.Potion =
    {
