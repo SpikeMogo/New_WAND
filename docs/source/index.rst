@@ -25,9 +25,5 @@ Contents
 
 .. note::
 
-	Please join our discord server 
+	Please join our discord server: W6XNj6E8cr
 
-
-.. warning::
-	
-	Please don't ...
