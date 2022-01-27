@@ -1,6 +1,6 @@
 # WAND v2.0 Introductory  
 
-**Wand 1.0** was initially created as a hobby project by **SpikeMogo @ Spike** as he was too lazy to play maple manually. **Hours of grinding? No way**. Hence, the very first version was created to do some botting / hunting / selling and some public available hacks incorporated into it. Though in due time, sadly, unfortunately, many users used this bot to hack instead of using its main core of botting. Then, faced with limitations of botting and giving a challenge to himself to further improve his own coding skills, Wand 2.0 is in its inception. Anyway, let's cut to the chase shall we?
+**Wand 1.0** was initially created as a hobby project by **SpikeMogo @ Spike** as he was too lazy to play maple manually. **Hours of grinding? No way**. Hence, the very first version was created to do some botting / hunting / selling and some public available hacks incorporated into it. 
 
 The main difference between Wand 2.0 and it's predecessor WAND 1.0 is its **ability to bot in the background**, having multiple bots running together on the same desktop without using separate VMs. Previously, Wand 1.0 needed to control the mouse and keyboard so you could not use your computer once the bot started running.
 
@@ -20,7 +20,8 @@ With Wand 2.0, **New Scripts and clearer APIs** are introduced which makes this 
 
 
 ## Documentation
-    [Check our document](https://newwand.readthedocs.io/en/latest)
+  The documentation is a work in progress
+#### [View WAND documentation](https://newwand.readthedocs.io/en/latest/)
 
 
 ## Disclaimer
