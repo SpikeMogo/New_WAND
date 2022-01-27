@@ -26,7 +26,7 @@ Discord bot installation
 
 
 
-- ``Step 4:`` Navigate to the **O2Auth** setting page, then sub-page **URL Generator**. Under **Bot permissions** either give it the **Administrator** permission or at least the **Send Messages** permission. 
+- ``Step 4:`` Navigate to the **O2Auth** setting page, then sub-page **URL Generator**. Under **Bot permissions** either give it the **Administrator** permission or at least the **Read/Send Messages** permission. 
 
 
                        - .. image:: https://i.imgur.com/Y7jeLJN.png
