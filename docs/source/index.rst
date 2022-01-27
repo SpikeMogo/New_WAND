@@ -15,8 +15,8 @@ Contents
 
 .. toctree::
    get_started
-   use_script
    bot_basic
+   use_script
    advanced
    api
    other_resource

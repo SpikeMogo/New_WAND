@@ -544,10 +544,28 @@ Input
 			SendKey(38, 4)
 
 	:note:
+		* This function calls ``PostMessageA`` (winuser.h), with two consecutive messages: WM_KEYDOWN and WM_KEYUP.
+		* In text box, this function may trigger two key-presses instead of one, if you want to sendkey in maple text box (e.g. chatbox), please use ``SendKey2()`` function
 		* This function works in ``background``, that means, the maple window doesn't need to be focused. However, background key-press may not be working for some skills. Tests are needed.
 		* Virtual-Key_ Codes: 
 			.. _Virtual-Key: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 
+
+.. function:: SendKey2(arg1, arg2=1)
+
+	:param arg1: key code
+	:type arg1: int 
+
+	:param arg2: repeat (optional, default = ``1`` )
+	:type arg2: int 
+
+	:return:  none
+
+
+	:note:
+		* Same as ``SendKey()`` function. But this function post one message: WM_KEYDOWN.
+
+		* You can use this function if you need to input in textbox, or need to hold a key for skills like ``BigBang``.
 
 
 .. function:: HoldKey(arg1, arg2)
@@ -702,17 +720,112 @@ Control
 Hack
 ^^^^^^^^^^^
 
-.. function:: SetMobFilter()
+.. function:: SetMobFilter(arg1,arg2)
 
-.. function:: SetItemFilter()
+	:param arg1: table of IDs
+	:type arg1: int
 
-.. function:: EnableHacks()
+	:param arg2: enable = ``true`` or ``false``
+	:type arg2: bool 
 
-.. function:: DisableHacks()
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			-- enable
+			SetMobFilter({1234567,7654321}, true)
+
+			-- disable
+			SetMobFilter({}, false)
+
+	:note:
+		* Risky
+
+.. function:: SetItemFilter(arg1,arg2)
+
+	:param arg1: table of IDs
+	:type arg1: int
+
+	:param arg2: enable = ``true`` or ``false``
+	:type arg2: bool 
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			-- enable
+			SetItemFilter({1234567,7654321}, true)
+
+			-- disable
+			SetItemFilter({}, false)
+
+	:note:
+		* Risky
+
+.. function:: EnableHacks(arg1)
+
+	:param arg1: table of indices
+	:type arg1: int
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			-- enable hacks no.1 no.2 no.3
+			EnableHacks({1,2,3})
+
+	:note:
+		* Please check the ``Hack`` page for index of each hack
+	
+
+
+.. function:: DisableHacks(arg1)
+
+	:param arg1: table of indices
+	:type arg1: int
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			-- disable hacks no.1 no.2 no.3
+			DisableHacks({1,2,3})
+
+	:note:
+		* Please check the ``Hack`` page for index of each hack
 
 .. function:: DisableAllHacks()
 
-.. function:: MapRush()
+	:return:  none
+
+	:note:
+		* Disable all hacks
+
+
+.. function:: MapRush(arg1, arg2)
+
+	:param arg1: mapID
+	:type arg1: int
+
+	:param arg1: method = ``0``, or ``1``, or ``2``  
+	:type arg1: int
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			-- Rush to map 104040000, with method 0
+			MapRush({104040000,0})
+
+	:note:
+		* Method: ``0`` uses Spawn control; ``1`` uses packet; ``2`` uses VIP-Rock (make sure you have rocks)
+		* Not all methods are working on every v83 server
+		* It's recommend to use method = ``0``
 
 
 .. _utility:
@@ -764,33 +877,209 @@ Utility
 		* This function posts a packet to client, so server will not know
 		* If you use this function for buffing, added buff will never die. However, this doesn't work for some buffs and may be risky for att-adding buffs
 
+.. function:: InsertBlockPacket(arg1,arg2)
 
-.. function:: RemoveBlockPacket()
+	:param arg1: table of strings
+	:type arg1: string
 
-.. function:: InsertBlockPacket()
+	:param arg2: type = ``Send`` or ``Recv``
+	:type arg2: string 
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			InsertBlockPacket({"03 00", "1A 00 00 01"}, "Send")
+
+	:note:
+		* Block Packets
+		* It will block any packet that equals or starts with your input string
+
+
+.. function:: RemoveBlockPacket(arg1,arg2)
+
+	:param arg1: table of strings
+	:type arg1: string
+
+	:param arg2: type = ``Send`` or ``Recv``
+	:type arg2: string 
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			RemoveBlockPacket({"03 00", "1A 00 00 01"}, "Send")
+
+	:note:
+		* Remove strings from the blocklist
 
 .. function:: ChangeChannel()
 
-.. function:: AssignAP()
+	:param arg1: channel 
+	:type arg1: int
 
-.. function:: AutoLogin()
+	:return:  none
 
-.. function:: ReadInput()
+	:example:
+		.. code-block:: lua
 
-.. function:: FindBMP()
+			-- cc4
+			ChangeChannel(4)
+
+	:note:
+		* This method is packet based
+
+.. function:: AssignAP(arg1,arg2,arg3,arg4)
+
+	:param arg1: Str
+	:type arg1: int
+	:param arg2: Dex
+	:type arg2: int
+	:param arg3: Int
+	:type arg3: int
+	:param arg4: Luk
+	:type arg4: int
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			-- add 4 str and 1 dex
+			AssignAP(4,1,0,0)
+
+.. function:: AutoLogin(arg1)
+
+	:param arg1: username@slot
+	:type arg1: string
+
+	:return:  none
+
+	:example:
+		.. code-block:: lua
+
+			-- login with username admin and character slot 1
+			AutoLogin("admin@1")
+
+	:note:
+		* Your must have saved account profile
+		* Make sure the password box is activated and no other UI is blocking the client
+
+
+.. function:: table = ReadInput()
+	
+	:return:  table of numbers
+
+	:example:
+		.. code-block:: lua
+
+			-- read one number from user
+			print("type 1 to continue the script")
+			x = ReadInput()
+			if x[1]==1 then
+    			print("yes")
+			else 
+    			StopScript()
+			end
+
+		.. code-block:: lua
+
+			-- read multiple numbers from user and print
+			x = ReadInput()
+			for _, i in pairs(x) do 
+    			print(i)
+			end
+
+	:note:
+		* Only accepts numbers, separate them with ``space``
+		* This function will pause the Lua thread until you cancel or enter inputs
+		* You can control the script in real time by using this function
+
+
+.. function:: x, y = FindBMP(arg1)
+
+	:param arg1: name_of_bmp
+	:type arg1: string
+
+	:return: position of the BMP in window coordinate
+
+	:example:
+		.. code-block:: lua
+
+			-- Find and click
+			x,y = FindBMP("my_bmp")
+			LeftClickOnWindow(x,y)
+
+
+	:note:
+		* You must use ``24 bit`` bmp 
+		* You need to put bmps in the ``bmps`` folder
+
 
 .. function:: PlayWav(arg1)
 
 	:param arg1: name_of_wav (optional)
 	:type arg1: string
 
+	:return: none
 
-.. function:: ReadPointerLua()
+	:example:
+		.. code-block:: lua
 
-.. function:: ReadMultiPointerSigned()
+			-- Play default alert sound
+			PlayWav()
+
+			-- Play custom sound
+			PlayWav("my_wav")
+
+	:note:
+		* You must use ``.wav`` 
+		* For custom sound, you need to put sound file in the ``sound`` folder
+
+
+.. function:: x = ReadPointerLua(arg1, arg2)
+	
+	:param arg1: base address
+	:type arg1: int
+
+	:param arg2: offset
+	:type arg2: int
+
+	:return: signed int
+
+	:example:
+		.. code-block:: lua
+
+			-- read mapID
+			n = ReadPointerLua(0xBED788, 0x668)
+
+
+.. function:: ReadMultiPointerSigned(arg1, arg2,...)
+	
+	:param arg1: base address
+	:type arg1: int
+
+	:param arg2-arg8: offsets, maximum 7 offsets are allowed
+
+	:type arg2-arg8: int
 
 
 
+	
+
+	:return: signed int
+
+	:example:
+		.. code-block:: lua
+
+			-- read first pet's HP
+			fullness = ReadMultiPointerSigned(0x00BF6860, 0x14, 0x10, 0xAC)
+
+
+	:note:
+		* Maximum ``7`` offsets are allowed
 
 
 

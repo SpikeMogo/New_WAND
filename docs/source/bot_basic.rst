@@ -1,4 +1,4 @@
 Bot basic
 ============
 
-hello
+.. image:: ../resource/WAND.png
