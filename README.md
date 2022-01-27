@@ -8,7 +8,7 @@ With Wand 2.0, **New Scripts and clearer APIs** are introduced which makes this 
 
 **Wand 2.0 Features**
 - `` Full background botting`` 
-- `` Discord bot``
+- `` Discord bot to send you timed updates / screenshot of current screen``
 - `` Ability to script your own custom functions and logic (you could do this previously, of course), enabling you to create all sorts of scripts`` 
 - `` Ability to bot / grind in full background mode / while minimized`` 
 - `` Ability to sell items via packets`` 
