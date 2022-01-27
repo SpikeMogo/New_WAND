@@ -1,4 +1,4 @@
 Bot basic
 ============
 
-.. figure:: https://github.com/SpikeMogo/New_WAND/blob/main/docs/resource/WAND.png?raw=true
+.. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/WAND.PNG

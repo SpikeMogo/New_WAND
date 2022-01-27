@@ -16,8 +16,6 @@ With Wand 2.0, **New Scripts and clearer APIs** are introduced which makes this 
 - `` Ability to filter equips based on stats by creating a whitelist.`` 
 - `` Ability to embed maplestory into WAND so you could open multiple clients / bots`` 
 
-## Wand 2.0 menu
-![test](https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/WAND.PNG)
 
 ## Disclaimer
 All information in this program or material herein is for informational, educational purposes and proof of concept only. Any actions and or activities related to the said material contained within this site are solely your responsibility. Any linked sites are not under the control of the author, thus its authors and/or contributors are not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites.
