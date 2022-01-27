@@ -28,9 +28,9 @@ You will get
 
 In the folder structure above:
 
-- ``Script`` contains example legit botting lua scripts
+- ``Script`` contains example scripts
 - ``bmps`` should contain .bmp files used in imagine recognition 
-- ``sound`` contains few sound effect the WAND uses
+- ``sound`` contains few sound effects WAND uses
 - ``discord_bot_dependency`` contains dependencies for discord_bot integration
 - ``ManualPortal.dat`` is where you add maplist/portal supplements
 - ``WAND_Disc.dll`` is the WAND with discord_bot integration
@@ -51,7 +51,7 @@ Install
 
 .. note::
 
-	``dlls`` in the ``discord_bot_dependency`` folder are from the D++ Extremely Lightweight C++ Discord Library: DPP_. You can find the dependencies here_.
+	``DLLs`` in the ``discord_bot_dependency`` folder are from the D++ Extremely Lightweight C++ Discord Library: DPP_. You can also find the dependencies here_.
 			.. _DPP:  https://github.com/brainboxdotcc/DPP
 			.. _here: https://github.com/brainboxdotcc/windows-bot-template
 
@@ -61,17 +61,17 @@ Injection
 tool
 ^^^^^^^^^
 
-It's recommend to use Extreme_Injector_ 
+	It's recommend to use Extreme_Injector_ 
 	.. _Extreme_Injector: https://github.com/master131/ExtremeInjector/releases
 
 
 inject
 ^^^^^^^^^^
-	- Open Extreme Injector in administrator mode
+	- Open Extreme Injector in **administrator mode**
 	- Select maple window process
-	- Select ``WAND_Disc.dll`` or ``WAND_No_Disc.dll``
-	- If you are injecting ``WAND_Disc.dll``, you can choose ``Standard Injection`` and ``Stealth Inject`` in the injector Settings. **Please note that you need to have discord_bot dependency dlls in the game folder**.
-	- If you are injecting ``WAND_No_Disc.dll``, you can use same setting, and you can also choose ``Manual Map`` for improved security.
+	- Select ``WAND_Disc.dll`` **or** ``WAND_No_Disc.dll``
+	- If you are injecting ``WAND_Disc.dll``, you can choose ``Standard Injection`` and ``Stealth Inject`` in the injector Settings. **Please note that you need to have all discord_bot dependency dlls in the game folder**.
+	- If you are injecting ``WAND_No_Disc.dll``, you can use the same setting, and you can also choose ``Manual Map`` for improved security.
 
 	.. warning::
 
@@ -92,7 +92,7 @@ Inject WAND, play around a bit, choose your script and hit run.
 
 .. note::
 
-	Please check :ref:`script_example` and learn how to start trying example script
+	Please check :ref:`script_example` and learn how to start using the example scripts
 
 
 .. note::
