@@ -110,7 +110,7 @@ local function AutoPotsAndBuff(Player)
     end
 
     --check the buffs
-    if global.IfHunt==false or module.Buffs.IfAutoBuff==false then return end
+    if global.IfStore or module.Buffs.IfAutoBuff==false then return end
     local Buffs = GetBuffandDebuff()
     for i=1,global.length(module.Buffs.Buff) do
 
@@ -308,8 +308,7 @@ end
 local function DealWithErroneousState(Player)
     
     --player dead
-    while(Player.IsDead and Player.hp==0)
-    do
+    if Player.IsDead and Player.hp==0 then
         print("....Rise the Dead....")
         locx,locy=FindBMP("OK")
         if(locx~=-1 and locy~=-1) then 
