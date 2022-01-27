@@ -527,7 +527,7 @@ Input
 	:param arg1: key code
 	:type arg1: int 
 
-	:param arg2: repeat, default = ``1`` 
+	:param arg2: repeat (optional, default = ``1`` )
 	:type arg2: int 
 
 	:return:  none
@@ -621,7 +621,7 @@ Control
 	:param arg2: y
 	:type arg2: int 
 
-	:param arg3: type (optional, default = 0)
+	:param arg3: type (optional, default = ``0``)
 	:type arg3: int 
 
 	:return:  n: ``1`` = moving; ``2`` = path_not_found; ``3`` = wrong_map
@@ -771,9 +771,9 @@ Utility
 
 .. function:: ChangeChannel()
 
-
 .. function:: AssignAP()
 
+.. function:: AutoLogin()
 
 .. function:: ReadInput()
 
@@ -787,7 +787,7 @@ Utility
 
 .. function:: ReadPointerLua()
 
-.. function:: ReadMultiSignedLua()
+.. function:: ReadMultiPointerSigned()
 
 
 
