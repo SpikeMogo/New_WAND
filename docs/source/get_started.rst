@@ -61,8 +61,8 @@ Injection
 tool
 ^^^^^^^^^
 
-	It's recommend to use Extreme_Injector_ 
-	.. _Extreme_Injector: https://github.com/master131/ExtremeInjector/releases
+	It is recommend to use Extreme_Injector_  
+		.. _Extreme_Injector: https://github.com/master131/ExtremeInjector/releases
 
 
 inject
@@ -70,7 +70,7 @@ inject
 	- Open Extreme Injector in **administrator mode**
 	- Select maple window process
 	- Select ``WAND_Disc.dll`` **or** ``WAND_No_Disc.dll``
-	- If you are injecting ``WAND_Disc.dll``, you can choose ``Standard Injection`` and ``Stealth Inject`` in the injector Settings. **Please note that you need to have all discord_bot dependency dlls in the game folder**.
+	- If you are injecting ``WAND_Disc.dll``, you can choose ``Standard Injection`` and ``Stealth Inject`` in the injector Settings. **Please note that you need to have all discord_bot dlls in the game folder**.
 	- If you are injecting ``WAND_No_Disc.dll``, you can use the same setting, and you can also choose ``Manual Map`` for improved security.
 
 	.. warning::
@@ -86,7 +86,7 @@ inject
 Run
 ----------------
 
-Inject WAND, play around a bit, choose your script and hit run.
+Inject WAND, play around a bit, create a new account, select example script, read example script, and hit run.
 
 
 
@@ -97,7 +97,7 @@ Inject WAND, play around a bit, choose your script and hit run.
 
 .. note::
 
-	Please check :ref:`discord_bot` and learn how to use the discord bot integration
+	Please check :ref:`discord_bot` and learn how to use the discord_bot integration
 
 .. note::
 

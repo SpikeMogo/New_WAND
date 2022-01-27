@@ -890,7 +890,7 @@ Utility
 	:example:
 		.. code-block:: lua
 
-			InsertBlockPacket({"03 00", "1A 00 00 01"}, "Send")
+			InsertBlockPacket({"003D", "001A 00 01"}, "Send")
 
 	:note:
 		* Block Packets
@@ -910,7 +910,7 @@ Utility
 	:example:
 		.. code-block:: lua
 
-			RemoveBlockPacket({"03 00", "1A 00 00 01"}, "Send")
+			RemoveBlockPacket({"003D", "001A 00 01"}, "Send")
 
 	:note:
 		* Remove strings from the blocklist
