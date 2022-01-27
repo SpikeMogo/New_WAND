@@ -3,7 +3,7 @@ Advanced
 
 .. _discord_bot: 
 
-Discord bot installation
+Discord bot installation test
 ------------
 .. _Discord: https://discord.com/developers/applications
 - ``Step 1:`` Copy the contents of the folder ``discord_bot_dependency`` into the Maplestory directory.
