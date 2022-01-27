@@ -18,3 +18,8 @@ With Wand 2.0, **New Scripts and clearer APIs** are introduced which makes this 
 
 ## Wand 2.0 menu
 ![test](https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/WAND.PNG)
+
+## Disclaimer
+All information and this program or material herein is for informational and educational purposes and proof of concept only. Any actions and or activities related to the said material contained within this site are solely your responsibility. Any linked sites are not under the control of the author, thus its authors and/or contributors are not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites.
+
+By using WAND and its content, you accept that this site and/or content will never harm you by giving out Trojans, Virus or any related potential hazardous malware that will steal your information.
