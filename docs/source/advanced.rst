@@ -17,7 +17,7 @@ Discord bot installation
 
 
     - .. image:: https://i.imgur.com/PMCOVcU.png
-Then Navigate to the **Bot** settings and create the bot, after you create the bot you will be presented with it's dashboard.
+- Then Navigate to the **Bot** settings and create the bot, after you create the bot you will be presented with it's dashboard.
     
     
                        - .. image:: https://i.imgur.com/5D8ma8Z.png
@@ -37,7 +37,7 @@ Then Navigate to the **Bot** settings and create the bot, after you create the b
                        
          
 	 
-	 then copy the **generated url** down the bottom, paste it into your browser and invite the bot. (sign into Discord on your browser)
+	- then copy the **generated url** down the bottom, paste it into your browser and invite the bot. (sign into Discord on your browser)
          
                       - .. image:: https://i.imgur.com/ChdaUFZ.png
          
@@ -53,11 +53,11 @@ Then Navigate to the **Bot** settings and create the bot, after you create the b
       - .. image:: https://i.imgur.com/51kad4v.png
       - .. image:: https://i.imgur.com/Qj2wHlj.png
       
-Go back to the **Bot's setting** page on the Discord application dashboard and grab the Bot's token, place it into the **Bot Token** input. 
+- Go back to the **Bot's setting** page on the Discord application dashboard and grab the Bot's token, place it into the **Bot Token** input. 
 
       - .. image:: https://i.imgur.com/alPtwUG.png
       
-then grab the channel ID that you want the bot to operate in, place it into the **Channel ID** input.
+- then grab the channel ID that you want the bot to operate in, place it into the **Channel ID** input.
 
       - .. image:: https://i.imgur.com/OFI2Xeo.png
       
@@ -65,7 +65,7 @@ then grab the channel ID that you want the bot to operate in, place it into the 
 
       - .. image:: https://i.imgur.com/3MSfMTn.png
 
-Once you are in-game, you can issue commands to the bot on Discord.
+- Once you are in-game, you can issue commands to the bot on Discord.
 
 ``!help`` returns a list of avaliable commands for you to issue with the bot which are self-explanatory
 
