@@ -37,6 +37,11 @@ function module.Walk(Player, mapID)
 
     portal = FindNextPortal(mapID)
 
+    if portal==nil then 
+        print("Cannot Obtain Portal to ", mapID)
+        return 
+    end
+
     if(portal.portalName=="Not_Found") then
         print(string.format("Uable to find portal to map %d",mapID))
         print(string.format("Please check the maplist and consider add connections manually"))
@@ -51,12 +56,14 @@ function module.Walk(Player, mapID)
         StopMove()
     end
     if ms~=2 and global.Distance(Player.x, Player.y, portal.x, portal.y)<module.Mindis*2 then
+        StopMove()
+        print("At Portal: ", portal.portalName)
         if portal.type=="game" then
-            StopMove()
-            SendKey(vk.VK_UP,4)
-            Delay(2000)
+            for i=1,5 do
+                SendKey(vk.VK_UP,4) Delay(100)
+            end
+            Delay(1000)
         else
-            StopMove()
             ManualPort(Player, portal)
         end
     end
