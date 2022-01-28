@@ -55,7 +55,7 @@ function module.Walk(Player, mapID)
         print("module.Walk: Uable to find the path")
         StopMove()
     end
-    if ms~=2 and global.Distance(Player.x, Player.y, portal.x, portal.y)<module.Mindis*2 then
+    if ms~=2 and global.Distance(Player.x, Player.y, portal.x, portal.y)<module.Mindis then
         StopMove()
         print("At Portal: ", portal.portalName)
         if portal.type=="game" then
