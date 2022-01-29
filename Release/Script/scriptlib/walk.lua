@@ -27,8 +27,10 @@ local function ManualPort(Player, portal)
 
     -- if no special move, still use portal
     StopMove()
-    SendKey(vk.VK_UP,4)
-    Delay(2000)
+    for i=1,5 do
+        SendKey(vk.VK_UP,4) Delay(100)
+    end
+    Delay(1000)
 
 end
 
@@ -50,7 +52,6 @@ function module.Walk(Player, mapID)
 
     
     local ms=MoveTo(portal.x, portal.y ,1)
-    --print("Moving to Portal: [",portal.x,", ",portal.y,"]")
     if ms==2 then
         print("module.Walk: Uable to find the path")
         StopMove()
