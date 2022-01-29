@@ -112,7 +112,7 @@ Add missing connection
 
       103000100 103000101 201 187  to_line1
 
-    this means there is a portal which warps you from ``103000100`` to ``103000101``, at location ```(195,190)``, and you want to call it ``to_line1``
+    this means there is a portal which warps you from ``103000100`` to ``103000101``, at location ``(195,190)``, and you want to call it ``to_line1``
 
 
 - ``Step 3:`` Re-inject WAND to make the change effective
@@ -128,7 +128,7 @@ Imagine you need to talk with a NPC to go somewhere, for example, a taxi or a to
 
 .. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/Maplist_hotel.png
 
-This picture is taken from ``Sleepywoond Hotel``, you need to talk to this Lady to go into the ``Regular Sauna`` map.
+This picture is taken from ``Sleepywood Hotel``, you need to talk to this Lady to go into the ``Regular Sauna`` map.
 
 - ``Step 1:`` Add connection
 
@@ -167,7 +167,7 @@ This picture is taken from ``Sleepywoond Hotel``, you need to talk to this Lady 
       Delay(2000)
     end
 
-  In the code block above, the code sees that the portal is manually added and the name is ``to_Sauna``, it will execute the 5 key-presses to enter the map.
+  In the code block above, the code sees that the portal is manually added, and the name of portal is ``to_Sauna``, it will execute the programmed 5 key-presses to enter the map.
 
 
 - ``Step 3:`` Re-inject WAND to make the change effective
