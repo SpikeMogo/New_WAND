@@ -396,6 +396,7 @@ Game Play
 			Item
 			├── ID
 			├── Name
+			├── Misc
 			└── Num
 
 
@@ -416,6 +417,35 @@ Game Play
 		* ``GetFullInventory()`` should be paired with ``RefreshInventory()`` with same inputs
 		* Depending on server, the results may not be accurate
 
+	:note:
+
+		the ``Misc`` of one a cash item may contain some useful inforamtion. Right now, the ``Misc`` of a pet is its fullness. Therefore, you can use this to do auto pot for your pet
+
+		below is an example of how you check fullness and feed the pet
+
+		.. code-block:: lua
+
+			-- refresh cash tab only
+			RefreshInventory({"Cash"}) 
+			Iven = GetFullInventory({"Cash"})
+	
+			-- find the pet
+			for _, item in pairs(Iven.Cash) do
+
+				if item.ID == module.Pet.ID then
+					local PetHP = item.Misc
+
+					print("Pet Fullness: ",PetHP)
+
+						-- feed the pet
+						if PetHP<=75 then
+							StopMove() Delay(200)
+							SendKey(module.Pet.PotKey)
+							print("Try Feed Pet")
+						end
+				end
+			end
+			
 ---------------------------------------
 
 .. function:: size = GetMapDimension()

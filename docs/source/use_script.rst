@@ -36,12 +36,96 @@ In the Script_ folder.
 
 - ``Bootstrap.lua`` is where you customize botting parameters.
 
-- You **only** need to select and run the ``Bootstrap.lua`` script. It will include all the modules in ``scriptlib`` automatically.
+	- ``maple`` module holds general game settings, like hunt map, buff, alert time etc....
+
+		.. code-block:: lua
+
+			maple.MaxRunTime = 3000   --max run time in minute 
+			-- append hunt map ID, and SafeSpot here
+			maple.HuntMapList =     {
+				{ID=100020000,SafeSpot={6, 65}},
+				{ID=100030000,SafeSpot={-4096, -63}},
+			} 
+			...
+			...
+			...
+
+
+	- ``store`` module holds settings for auto sell/buy functions and also settings for autopot
+
+		.. code-block:: lua
+
+			store.StoreMap=100000102                    
+			store.NPCLocation = {-351, 224}          --stand close the npc, make sure you can open the NPC chat by key-pressing
+			store.NPCChatKey = vk.VK_SPACE            
+			store.SellWhenEquipsMoreThan=55         
+			store.CCAfterSell= {On = true, RandomCC = false}     
+			store.Potion = {
+				IfBuyPots=true,      
+				IfAutoPot=true,        
+				HpOnKey = vk.VK_DELETE,    -- only support QuickSlot (8 keys in total)
+				MpOnKey = vk.VK_END,       -- only support QuickSlot (8 keys in total)
+				FeedDelay=0.2,             -- Auto pot delay in sec
+				AutoHpThreshold=300,      
+				AutoMpThreshold=50,          
+				BuyPotionList={
+					HP={ID=2000001,BuyNum=600, LowerLimit = 20},  -- go the store if pot is below the LowerLimit
+					MP={ID=2000003,BuyNum=500, LowerLimit = 20},
+				}
+			}
+			...
+			...
+			...
+
+		.. warning::
+
+			You need to put **all non-tradable** times in the white-list, the sell function is based on packet, therefore, it may crash if you are trying to sell non-tradable items
+
+
+			- the whitelist setting is also in ``store`` module
+			
+			.. code-block:: lua
+
+				store.EquipWhiteList=  {
+					{ID=1302056,Stats={"Watk",103} },   -- 
+					{ID=1122077,Stats={}},
+					{ID=1222222,Stats={"Str", 1,"Dex", 2} },
+				}
+				store.UseEtcWhiteList=  {
+					{ID=2030004},
+					{ID=2030000},
+				}
+
+
+	- ``hunt`` module holds settings for finding and attacking mobs
+
+
+	- ``loot`` module holds settings for loot 
+
+		.. code-block:: lua
+
+			loot.Enable= true  -- enable auto loot function
+			loot.LootKey=vk.VK_Z    
+			loot.CasualLoot = true -- loot when you pass by a drop
+			loot.LootStyle = 2    -- 1 = loot MustPick item immediately, and ignore mobs on the way; 2 = loot MustPick item, but can hunt on the wa			
+			-- you can put "Mesos", "Equip", "Use", "Setup" "Etc", "Cash", 
+			loot.MustPickType =  { "Equip",}
+
+		.. note::
+
+			Items often land at difficult locations and cause issue for pathing, we recommend that you don't put types in ``MustPickType``. Instead, get a pet and set  ``CasualLoot = true``
+
+
+
+Use Script
+------------------
+
+- **You only need to select and run the** ``Bootstrap.lua`` **script. It will include all the modules in** ``scriptlib`` **automatically.**
 
 - ``scriptlib`` contains different modules like hunt, loot, walk, and store. For most of time you don't need to change those.
 
 .. note:: 
-		We encourage you to read all scripts in the ``Script`` folder. 
+		We encourage you to read all scripts in the ``scriptlib`` folder. 
 
 .. note:: 
 		Please also share your scripts and ideas in our discord server. 

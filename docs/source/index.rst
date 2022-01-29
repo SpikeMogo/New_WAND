@@ -20,6 +20,7 @@ Contents
    advanced
    api
    other_resource
+   snippet
    faq
 
 
