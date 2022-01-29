@@ -208,9 +208,9 @@ Follow these steps to create a BMP to be used within your script.
 
 
 
-      - .. image:: https://i.imgur.com/5vdghJz.png
-      - .. image:: https://i.imgur.com/3Xwx5CM.png
-      - .. image:: https://i.imgur.com/yXsggnl.png
+ - .. image:: https://i.imgur.com/5vdghJz.png
+ - .. image:: https://i.imgur.com/3Xwx5CM.png
+ - .. image:: https://i.imgur.com/yXsggnl.png
       
       
 - ``Step 3:`` Test the BMP out by writing a small loop to print the X,Y of the BMP you are trying to find. You should be familar with the functions, the function to call is ``FindBMP("ASSETNAME")``
