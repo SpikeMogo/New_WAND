@@ -111,7 +111,7 @@ Add missing connection
 
       103000100 103000101 201 187  to_line1
 
-    this means there is a portal which warps you from ``103000100`` to ``103000101``, at location ``(195,190)``, and you want to call it ``to_line1``
+    this means there is a portal which warps you from ``103000100`` to ``103000101``, at location ``(201,187)``, and you want to call it ``to_line1``
 
 
 - ``Step 3:`` Re-inject WAND to make the change effective
