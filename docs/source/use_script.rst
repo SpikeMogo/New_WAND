@@ -55,6 +55,10 @@ Example
 we provide 5 different example scripts in the ``Script`` folder. If you are new to WAND, please create a new account and try the first example below.
 
 
+.. note:: 
+
+	All examples are tested on ``MapleRoyals``
+
 - ``Example_Begin_1_8.lua:``
 
 	- this script is designed for ``MapleRoyals``.
