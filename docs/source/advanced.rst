@@ -83,9 +83,9 @@ Discord bot installation
 Supplement maplist
 --------------------
 
-There are two sets of Maplists in WAND, one is from Royal_2021 (a mixture of v.62 and v.83), another one is from Dream_2021 (close to v.83). 
+There are two sets of ``Maplists`` in WAND, one is from ``Royal_2021`` (a mixture of v.62 and v.83), another one is from ``Dream_2021`` (close to v.83). 
 
-The Maplist of WAND contains maps (ID, name) and portals (location, name, type). Maplist is **not** a complete set of all maps and portals you may find in a server. For example, some portals are controlled by server-side scripts, or are NPC-related.
+The Maplist of WAND contains ``maps`` (ID, name) and ``portals`` (location, name, type). Maplist is **not** a complete set of all maps and portals you may find in a server. For example, some portals are controlled by server-side scripts, or are NPC-related.
 
 Therefore, WAND provides a way to supplement the Maplist.
 
