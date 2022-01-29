@@ -205,7 +205,7 @@ Follow these steps to create a BMP to be used within your script.
 .. note::
 
  !!!Save the image as a 24-bit bitmap!!!
-
+----------------
 
 
  - .. image:: https://i.imgur.com/5vdghJz.png
