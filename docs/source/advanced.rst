@@ -110,12 +110,16 @@ Add missing connection
 
     .. code-block:: Batch
 
-      103000100 103000101 195 190  to_line1
+      103000100 103000101 201 187  to_line1
 
     this means there is a portal which warps you from ``103000100`` to ``103000101``, at location ```(195,190)``, and you want to call it ``to_line1``
 
 
 - ``Step 3:`` Re-inject WAND to make the change effective
+
+.. note:: 
+
+  the portal location may vary from server to server, please check on your server
 
 Add NPC portal
 ^^^^^^^^^^^^^^^^^^^^^^^
