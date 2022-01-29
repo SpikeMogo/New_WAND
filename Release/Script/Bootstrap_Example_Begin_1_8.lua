@@ -49,7 +49,7 @@ maple.IfUseScrollToTown=false       -- use return scroll back to town
 ReturnScrollID = 2030000            -- return scroll item ID
 ------
 maple.StopAtLevel = 8              -- stop at level = x
-maple.AutoAp = {str=0, dex=0, int = 5, luk = 0}  --auto ap
+maple.AutoAp = {str=0, dex=0, int = 0, luk = 0}  --auto ap
 ------
 maple.Movement=
     {   MaxJump = 80,

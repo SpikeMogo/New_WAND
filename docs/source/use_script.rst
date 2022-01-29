@@ -3,12 +3,19 @@ Use script
 
 
 
+
+.. note::
+
+	Please check :doc:`luaapi` for the usage of Lua API.
+
+
 .. _script_structure:
 
 Script structure
 ------------------
 
-To use the script
+
+
 
 
 
