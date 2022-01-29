@@ -186,4 +186,48 @@ This picture is taken from ``Sleepywood Hotel``, you need to talk to this Lady t
 
 Read bmp
 --------------------
-To use 
+The bot has a read BMP function, where it will attempt to find the position of an asset in the MapleStory window from a corresponding BMP in the BMP folder.
+
+Follow these steps to create a BMP to be used within your script.
+
+.. note:: 
+
+ BMP's MUST be made in 24BIT colour mode.
+ 
+.. note::
+
+  ONLY USE MICROSOFT PAINT TO CREATE THE BMP.
+  
+- ``Step 1:`` Identify the asset you want to create a BMP of. Example, let's grab the; "Trade" button location and print X,Y according to BMP.
+
+- ``Step 2:`` PrintScreen the MapleStory window, go to Paint, paste and zoom in to the image, at the asset you want to create the BMP of. Make a small rectangular box, try to get some unique pixels and crop the image and save as 24-bit bitmap inside the **bmps** folder within the script directory.
+
+.. note::
+
+ !!!Save the image as a 24-bit bitmap!!!
+
+
+
+      - .. image:: https://i.imgur.com/5vdghJz.png
+      - .. image:: https://i.imgur.com/3Xwx5CM.png
+      - .. image:: https://i.imgur.com/yXsggnl.png
+      
+      
+- ``Step 3:`` Test the BMP out by writing a small loop to print the X,Y of the BMP you are trying to find. You should be familar with the functions, the function to call is ``FindBMP("ASSETNAME")``
+
+.. code-block:: lua
+      
+    local click = 1
+    while click == 1 do
+        locx,locy=FindBMP("TradeB")
+        if(locx~=-1 and locy~=-1) then
+         print("Trade button is at X: ",locx," and Y: ",locy)
+            click=click+1
+        end
+   end
+
+
+
+
+
+- .. image:: https://i.imgur.com/JCX7yi8.gif
