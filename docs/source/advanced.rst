@@ -215,6 +215,10 @@ Follow these steps to create a BMP to be used within your script.
       
 - ``Step 3:`` Test the BMP out by writing a small loop to print the X,Y of the BMP you are trying to find. You should be familar with the functions, the function to call is ``FindBMP("ASSETNAME")``
 
+.. warning::
+ FindBMP will NOT work in embedded mode.
+----------------
+
 .. code-block:: lua
       
     local click = 1
