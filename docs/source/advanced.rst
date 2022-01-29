@@ -94,14 +94,15 @@ Add missing connection
 
 - ``Step 1:`` Check the Maplist when a path cannot be found in WAND
 
-  .. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/Maplist_list.png
+  - .. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/Maplist_list.png
 
   - from the figure above, you can see that there is no portal goes from ``Subway Ticketing Booth`` to ``Line 1``.
 
 
 - ``Step 2:`` Add connection
 
-  .. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/Maplist_sub.png
+  - .. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/Maplist_sub.png
+    :width: 200
 
   - let's stand in the portal and record the location of the portal
 
@@ -123,7 +124,7 @@ Imagine you need to talk with a NPC to go somewhere, for example, a taxi or a to
 
 .. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/Maplist_hotel.png
 
-This picture shows that you need to talk to this NPC to go into the ``Regular Sauna`` map.
+This picture is taken from ``Sleepywoond Hotel``, you need to talk to this Lady to go into the ``Regular Sauna`` map.
 
 - ``Step 1:`` Add connection
 
@@ -138,7 +139,7 @@ This picture shows that you need to talk to this NPC to go into the ``Regular Sa
 
 - ``Step 2:`` In the ``walk.lua`` script_ , you need to add instructions about how to talk to the NPC step by step.
 
-  .. _script: https://github.com/SpikeMogo/New_WAND/tree/main/Release/
+  .. _script: https://github.com/SpikeMogo/New_WAND/blob/main/Release/Script/scriptlib/walk.lua
 
 
   .. code-block:: lua
