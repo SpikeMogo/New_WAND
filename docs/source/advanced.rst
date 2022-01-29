@@ -78,7 +78,7 @@ Discord bot installation
       
 
 .. _supplement_maplist:
-
+--------------------------
 
 Supplement maplist
 --------------------
@@ -183,6 +183,7 @@ This picture is taken from ``Sleepywood Hotel``, you need to talk to this Lady t
 
 
 .. _read_bmp:
+--------------------------
 
 Read bmp
 --------------------
