@@ -78,7 +78,6 @@ Discord bot installation
       
 
 .. _supplement_maplist:
---------------------------
 
 Supplement maplist
 --------------------
@@ -183,7 +182,6 @@ This picture is taken from ``Sleepywood Hotel``, you need to talk to this Lady t
 
 
 .. _read_bmp:
---------------------------
 
 Read bmp
 --------------------
@@ -206,7 +204,7 @@ Follow these steps to create a BMP to be used within your script.
 .. note::
 
  !!!Save the image as a 24-bit bitmap!!!
-----------------
+
 
 
  - .. image:: https://i.imgur.com/5vdghJz.png
@@ -218,7 +216,7 @@ Follow these steps to create a BMP to be used within your script.
 
 .. warning::
  FindBMP will NOT work in embedded mode.
-----------------
+
 
 .. code-block:: lua
       
