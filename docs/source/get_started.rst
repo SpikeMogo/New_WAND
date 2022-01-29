@@ -1,6 +1,12 @@
 Get started
 ===============
 
+.. note::
+
+     We do not support Windows XP / Vista / 7 / 8, these have not been tested.
+------------
+
+
 .. _gather_files:
 
 Gather files
@@ -54,6 +60,12 @@ Install
 	``DLLs`` in the ``discord_bot_dependency`` folder are from the D++ Extremely Lightweight C++ Discord Library: DPP_. You can also find the dependencies here_.
 			.. _DPP:  https://github.com/brainboxdotcc/DPP
 			.. _here: https://github.com/brainboxdotcc/windows-bot-template
+
+Dependencies
+^^^^^^^^^
+	 Visual C++ 2017 redistributables: C_
+			.. _C:  https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
 
 Injection
 ----------------
