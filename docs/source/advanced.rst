@@ -102,7 +102,7 @@ Add missing connection
 - ``Step 2:`` Add connection
 
   - .. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/Maplist_sub.png
-    :width: 200
+      :width: 200
 
   - let's stand in the portal and record the location of the portal
 
