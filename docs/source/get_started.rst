@@ -99,40 +99,39 @@ inject
 
 
 
-.. _auto_login:
-
-Auto Login
-------------
-
-	- Fill in the login details
-	
-	.. image:: https://i.imgur.com/uoI5PGR.png
-	
-        - Make sure you have every requirement filled (enter random data for pic/pin if you don't have one), then save the login profile.
-	  it will save and you should have the profile saved under your username, with the saved slot of char.
-	  
-	.. image:: https://i.imgur.com/rWc60wv.png
-
-
-
-        - Right now you are required to have something in the Username field, it can be any saved data, it just has to have some string in it.
-	  Press ``Login``, it should look like the video below.
-
-
-
-        .. image:: https://github.com/SpikeMogo/New_WAND/blob/main/docs/resource/Login.gif?raw=true
-
-
-
-
-
-
 .. _Run:
 
 Run
 ----------------
 
 Inject WAND, play around a bit, create a new account, select example script, read example script, and hit run.
+
+
+.. _auto_login:
+
+About Auto Login
+------------------
+
+	- Fill in the login details
+	
+		.. image:: https://i.imgur.com/uoI5PGR.png
+	
+		- Make sure you have every requirement filled (enter random data for pic/pin if you don't have one), then save the login profile. It will save and you should have the profile saved under your username, with the saved slot of char.
+	  
+		.. image:: https://i.imgur.com/rWc60wv.png
+
+
+
+	- If you are using a new installed client, right now you are required to have something in the Username field, it can be any saved data, or some random string in it.
+
+	- And check the ``Save login ID``
+	
+	
+	- Press ``Login``, it should look like the video below.
+
+
+	.. image:: https://github.com/SpikeMogo/New_WAND/blob/main/docs/resource/Login.gif?raw=true
+
 
 
 
