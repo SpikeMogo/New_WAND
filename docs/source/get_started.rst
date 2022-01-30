@@ -4,6 +4,8 @@ Get started
 .. note::
 
      We do not support Windows XP / Vista / 7 / 8, these have not been tested.
+
+
 ------------
 
 
@@ -62,8 +64,8 @@ Install
 			.. _here: https://github.com/brainboxdotcc/windows-bot-template
 
 Dependencies
-^^^^^^^^^
-	 Visual C++ 2017 redistributables: C_
+^^^^^^^^^^^^^
+	 (If you are using old OS) Visual C++ 2017 redistributables: C_
 			.. _C:  https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
 
