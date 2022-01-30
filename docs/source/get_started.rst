@@ -116,7 +116,7 @@ Auto Login
         - Right now you are required to have something in the Username field, it can be any saved data, it just has to have some string in it.
 	  Press ``Login``, it should look like the video below.
 
-        .. image:: https://github.com/SpikeMogo/New_WAND/blob/main/docs/resource/Login.gif
+       .. image:: https://github.com/SpikeMogo/New_WAND/blob/main/docs/resource/Login.gif
 
 
 
