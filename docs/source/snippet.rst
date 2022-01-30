@@ -8,8 +8,7 @@ Here, we post some useful example snippets for script development, you should ha
 Feeding Pet Via Pointer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. collapse::
-  - ``Step 1:`` Open your maple.lua (if you have read the guide you will know what is in this file) which contains the user functions. Copy+Paste this in the function area
+- ``Step 1:`` Open your maple.lua (if you have read the guide you will know what is in this file) which contains the user functions. Copy+Paste this in the function area
 
   .. note::
 
