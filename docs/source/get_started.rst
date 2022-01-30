@@ -108,7 +108,7 @@ Auto Login
 	
 	.. image:: https://i.imgur.com/uoI5PGR.png
 	
-        - Make sure you have every requirement filled (unless you have no pin/pic), then save the login profile.
+        - Make sure you have every requirement filled (enter random data for pic/pin if you don't have one), then save the login profile.
 	  it will save and you should have the profile saved under your username, with the saved slot of char.
 	  
 	.. image:: https://i.imgur.com/rWc60wv.png
