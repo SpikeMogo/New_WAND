@@ -56,3 +56,7 @@ Here, we post some useful example snippets for script development, you should ha
      maple.petfoodkey = vk.VK_Y -- pet food key
      maple.MinFullness = 30 --min pet fullness level
      maple.PetFeedDelay = 1 --1 second
+     
+     
+
+--------------------------
