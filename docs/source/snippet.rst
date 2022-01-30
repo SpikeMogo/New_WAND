@@ -4,10 +4,12 @@ Script Snippet
 Here, we post some useful example snippets for script development, you should have a basic understanding of the script layout.
 
 
+
 Feeding Pet Via Pointer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- ``Step 1:`` Open your maple.lua (if you have read the guide you will know what is in this file) which contains the user functions. Copy+Paste this in the function area
+.. collapse::
+  - ``Step 1:`` Open your maple.lua (if you have read the guide you will know what is in this file) which contains the user functions. Copy+Paste this in the function area
 
   .. note::
 
