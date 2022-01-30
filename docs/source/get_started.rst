@@ -63,14 +63,16 @@ Install
 			.. _DPP:  https://github.com/brainboxdotcc/DPP
 			.. _here: https://github.com/brainboxdotcc/windows-bot-template
 
-Dependencies
-^^^^^^^^^^^^^
-	 (If you are using old OS) Visual C++ 2017 redistributables: C_
-			.. _C:  https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
-
 
 Injection
 ----------------
+
+
+
+Dependencies
+^^^^^^^^^^^^^
+	- Visual C++ 2017 redistributables_ (If you are using outdated OS) 
+		.. _redistributables:  https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
 tool
 ^^^^^^^^^

@@ -12,18 +12,17 @@ FAQ
 - ``How do I use the bot?``
    - **Refer to guide**
   
----------
 
 TESTED SERVER LIST
 ---------------------
 
   - MapleRoyals / **Working**
   - HeavenMS Source servers / **Working**
-  - CloverMS / StoryMS tested
-  - DreamMS / **Working**
+  - CloverMS / StoryMS **Working**
+  - DreamMS / **Working (need bypass)**
 
 .. warning::
-
-    You will need a bypass for DreamMS for injection, we do not provide any bypasses.
+  
+  You will need a bypass for DreamMS for injection, we do not provide any bypasses.
    
  
