@@ -61,3 +61,93 @@ Feeding Pet Via Pointer
      maple.PetFeedDelay = 1 --1 second
      
      
+
+Edge detection while hunting
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(author: Spike)
+
+
+- Everything is done in hunt.lua
+
+- ``Step 1:``  
+Replace
+
+  .. code-block:: lua
+
+
+      local FailCount=0;
+      function module.Run()         
+  - With
+
+  .. code-block:: lua
+
+
+      local FailCount=0;
+      local Edge=false;
+      function module.Run()
+      
+      
+- ``Step 2:``
+Replace
+
+  .. code-block:: lua
+  
+  
+       local attackable = TryAttack(moblist)
+       
+       
+  - With
+  
+  
+  .. code-block:: lua
+       
+       
+       if Edge then
+        local attackable = false
+       else
+       local attackable = TryAttack(moblist)
+       end
+
+- ``Step 3:``
+Replace
+
+  .. code-block:: lua
+  
+  
+        last_target = FindNextPos(moblist)  
+        --print(last_target.x, ",", last_target.y,", ", Player.x,",",Player.y)
+         if last_target ~= nil then      
+
+        local dst = math.abs(last_target.x-Player.x) + math.abs(last_target.y-Player.y)
+        
+        local ms=MoveTo(last_target.x,last_target.y)
+       
+       
+  - With
+  
+  
+  .. code-block:: lua
+       
+       
+     last_target = FindNextPos(moblist)  
+    --print(last_target.x, ",", last_target.y,", ", Player.x,",",Player.y)
+     if last_target ~= nil then      
+        local tolerance=100
+        local xP=last_target.x
+        xmin,  xmax  = PlatformEdges(Player.x, Player.y)
+        xminM, xmaxM = PlatformEdges(last_target.x, last_target.y)
+        local dst = math.abs(last_target.x-Player.x) + math.abs(last_target.y-Player.y)
+        
+        Edge=false
+        if xmin==xminM and xmax==xmaxM and xmaxM-xminM>3*tolerance and Player.x-xmin<tolerance then
+            xP=Player.x+tolerance
+            Edge=true
+        end
+        if xmin==xminM and xmax==xmaxM and xmaxM-xminM>3*tolerance and -Player.x+xmax<tolerance then
+            xP=Player.x-tolerance
+            Edge=true
+        end
+
+
+        local ms=MoveTo(xP,last_target.y)
+              
