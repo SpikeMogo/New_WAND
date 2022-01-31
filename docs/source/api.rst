@@ -548,6 +548,27 @@ Game Play
 			.. _Virtual-Key: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 
 
+.. function:: l, r = PlatformEdge(arg1, arg2)
+
+	:param arg1: x
+	:type arg1: int 
+
+	:param arg2: y
+	:type arg2: int 
+
+	:return:  left and right edges of the platform
+
+
+	:example: 
+		.. code-block:: lua
+
+			left, right = PlatformEdge(100,200)
+
+	:note:
+		* Some map structures are complicated, this function doesn't always return good values.
+		* Not all position ``(x,y)`` will land on a platform, ``(-10000,10000)`` will be returned when location is not associated with a platform.
+
+
 
 .. _input:
 
