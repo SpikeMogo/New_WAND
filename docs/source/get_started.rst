@@ -114,7 +114,7 @@ About Auto Login
 
 	.. note::
 
-		In WAND 2.0, we primarily use key-presses to perform auto-login, in order to adapt to most private serves (some serves use different packets, packet-based way may not work...)
+		In WAND 2.0, we primarily use key-presses to perform auto-login, in order to adapt to most private servers (some servers use different packets, therefore packet-based way may not work...)
 
 	- Fill in the login details
 	
