@@ -11,7 +11,7 @@ how to :ref:`installation` the bot.
 
 .. Note::
 
-	Hi, I am Spike, developer of WAND 1.0 and WAND 2.0. The WAND has always been a free bot and will keep free in the future. If you like WAND and want to support me, you can donate. Would be appreciated!
+	Hi, I am Spike, developer of WAND 1.0 and WAND 2.0. The WAND has always been a free bot and will keep free in the future. If you like WAND and want to support my development, you can donate. Would be appreciated!
 
 	.. image:: https://raw.githubusercontent.com/SpikeMogo/New_WAND/main/docs/resource/dona.png
 

@@ -112,6 +112,10 @@ Inject WAND, play around a bit, create a new account, select example script, rea
 About Auto Login
 ------------------
 
+	.. note::
+
+		In WAND 2.0, we primarily use key-presses to perform auto-login, in order to adapt to most private serves (some serves use different packets, packet-based way may not work...)
+
 	- Fill in the login details
 	
 		.. image:: https://i.imgur.com/uoI5PGR.png
@@ -120,9 +124,6 @@ About Auto Login
 	  
 		.. image:: https://i.imgur.com/rWc60wv.png
 
-
-
-	- If you are using a new installed client, right now you are required to have something in the Username field, it can be any saved data, or some random string in it.
 
 	- And check the ``Save login ID``
 	
