@@ -63,21 +63,23 @@ Feeding Pet Via Pointer
      
 
 Edge detection while hunting
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 (author: Spike)
 
 
 - Everything is done in hunt.lua
 
 - ``Step 1:``  
-Replace
+
+  Replace
 
   .. code-block:: lua
 
 
       local FailCount=0;
       function module.Run()         
-  - With
+  
+  With
 
   .. code-block:: lua
 
@@ -88,7 +90,8 @@ Replace
       
       
 - ``Step 2:``
-Replace
+
+  Replace
 
   .. code-block:: lua
   
@@ -96,7 +99,7 @@ Replace
        local attackable = TryAttack(moblist)
        
        
-  - With
+  With
   
   
   .. code-block:: lua
@@ -109,7 +112,8 @@ Replace
        end
 
 - ``Step 3:``
-Replace
+
+  Replace
 
   .. code-block:: lua
   
@@ -123,7 +127,7 @@ Replace
         local ms=MoveTo(last_target.x,last_target.y)
        
        
-  - With
+  With
   
   
   .. code-block:: lua
