@@ -9,7 +9,7 @@ Check out the :doc:`get_started` section for further information, including
 how to :ref:`installation` the bot.
 
 
-.. Note::
+.. seealso::
 
 	Hi, I am Spike, developer of WAND 1.0 and WAND 2.0. The WAND has always been a free bot and will keep free in the future. If you like WAND and want to support my development, you can donate. Would be appreciated!
 
