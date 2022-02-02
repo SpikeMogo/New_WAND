@@ -228,4 +228,4 @@ You can also adjust tolerance at this line.
   .. code-block:: lua
        
        
-        module.GrabNPC = true,
+        module.GrabNPC = true
