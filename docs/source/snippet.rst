@@ -162,6 +162,7 @@ Finding Single NPC (store) X/Y using pointer.
 (author:  XTEAC)
 
 .. note:: This only points to the first NPC on the map, so it will only work on maps with single NPC's(other NPC X/Y's contained further up in pointer path)
+          Set Store X/Y to 1,1 (we are comparing invalid location to correct NPC location.
 
 
  - ``Step 1:`` Go to store.lua and add in
