@@ -155,3 +155,75 @@ Edge detection while hunting
 
         local ms=MoveTo(xP,last_target.y)
               
+
+
+Finding Single NPC (store) X/Y using pointer.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(author:  XTEAC)
+
+.. note:: This only points to the first NPC on the map, so it will only work on maps with single NPC's(other NPC X/Y's contained further up in pointer path)
+
+
+ - ``Step 1:`` Go to store.lua and add in
+
+   
+   
+ .. code-block:: lua
+       
+       
+        ---Find Sale NPC X/Y by pointer---
+        NPCX = ReadMultiPointerSigned(0x00BED780, 0x2C, 0x10, 0x150)
+        NPCY = ReadMultiPointerSigned(0x00BED780, 0x2C, 0x10, 0x154)
+        if module.GrabNPC==true and GetMapID()==module.StoreMap and module.NPCLocation[1]~=NPCX and module.NPCLocation[2]~=NPCY then
+        module.NPCLocation[1] = NPCX
+        module.NPCLocation[2] = NPCY
+        print("Set store location  X: ",NPCX," Y: ",NPCY,"")
+        end
+        ---Find Sale NPC X/Y by pointer---
+        
+  
+  
+ Below
+  
+  
+ .. code-block:: lua
+       
+       
+        function module.Sell(Player)
+        
+        
+        
+        
+        
+ You can adjust tolerance at this line.
+  
+  
+ .. code-block:: lua
+       
+       
+        if global.Distance(Player.x, Player.y, module.NPCLocation[1], module.NPCLocation[2])
+        
+        
+        
+        
+        
+- ``Step 2:`` Add module to control on/off
+ 
+ 
+ 
+  .. code-block:: lua
+       
+       
+        module.GrabNPC = true
+        
+        
+        
+        
+- ``Step 3:`` Then add to bootstrap so you can control it there.
+ 
+ 
+ 
+  .. code-block:: lua
+       
+       
+        module.GrabNPC = true,
