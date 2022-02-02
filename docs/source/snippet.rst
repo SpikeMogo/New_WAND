@@ -165,7 +165,8 @@ Finding Single NPC (store) X/Y using pointer.
           Set Store X/Y to 1,1 (we are comparing invalid location to correct NPC location.
 
 
- - ``Step 1:`` Go to store.lua and add in
+
+- ``Step 1:`` Go to store.lua and add in
 
    
    
@@ -184,7 +185,7 @@ Finding Single NPC (store) X/Y using pointer.
         
   
   
- Below
+Below
   
   
  .. code-block:: lua
@@ -196,7 +197,7 @@ Finding Single NPC (store) X/Y using pointer.
         
         
         
- You can adjust tolerance at this line.
+You can also adjust tolerance at this line.
   
   
  .. code-block:: lua
