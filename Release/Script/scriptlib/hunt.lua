@@ -147,13 +147,15 @@ local function TryAttack(moblist)
         
     if attack_count >= module.Attack.MobAttack then          
         if need_reverse then 
-            StopMove()
+            StopMove() 
             if orient == 1 then
                 HoldKey(vk.VK_RIGHT,0)
+                SendKey(vk.VK_LEFT)
                 SendKey(vk.VK_LEFT)
                 HoldKey(vk.VK_LEFT, 1)
             else
                 HoldKey(vk.VK_LEFT, 0)
+                SendKey(vk.VK_RIGHT)
                 SendKey(vk.VK_RIGHT)
                 HoldKey(vk.VK_RIGHT,1)                
             end
