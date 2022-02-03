@@ -64,7 +64,7 @@ Feeding Pet Via Pointer
 
 Edge detection while hunting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-(author: Spike)
+(author: XTEAC, Spike)
 
 
 - Everything is done in hunt.lua
