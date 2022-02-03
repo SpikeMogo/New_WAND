@@ -158,7 +158,7 @@ Edge detection while hunting
 
 
 Finding Single NPC (store) X/Y using pointer.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 (author:  XTEAC)
 
 .. note:: This only points to the first NPC on the map, so it will only work on maps with single NPC's(other NPC X/Y's contained further up in pointer path)
@@ -170,7 +170,7 @@ Finding Single NPC (store) X/Y using pointer.
 
    
    
- .. code-block:: lua
+  .. code-block:: lua
        
        
         ---Find Sale NPC X/Y by pointer---
@@ -185,11 +185,10 @@ Finding Single NPC (store) X/Y using pointer.
         
   
   
-Below
+  Below
   
   
- .. code-block:: lua
-       
+  .. code-block:: lua
        
         function module.Sell(Player)
         
@@ -197,10 +196,10 @@ Below
         
         
         
-You can also adjust tolerance at this line.
+  You can also adjust tolerance at this line.
   
   
- .. code-block:: lua
+  .. code-block:: lua
        
        
         if global.Distance(Player.x, Player.y, module.NPCLocation[1], module.NPCLocation[2])
