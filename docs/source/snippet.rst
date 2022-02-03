@@ -215,7 +215,7 @@ Finding Single NPC (store) X/Y using pointer.
   .. code-block:: lua
        
        
-        module.GrabNPC = true
+        GrabNPC = true,
         
         
         
@@ -227,4 +227,4 @@ Finding Single NPC (store) X/Y using pointer.
   .. code-block:: lua
        
        
-        module.GrabNPC = true
+        store.GrabNPC = true
