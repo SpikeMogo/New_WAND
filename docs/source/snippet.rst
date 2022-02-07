@@ -228,3 +228,83 @@ Finding Single NPC (store) X/Y using pointer.
        
        
         store.GrabNPC = true
+        
+
+
+
+
+Manual Platforms
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(author:  XTEAC, Spike)
+
+- Everything is done in hunt.lua
+
+- ``Step 1:`` Open your hunt.lua, find the moblist area near
+
+  
+  .. code-block:: lua
+       
+       
+       function module.Run()
+       
+
+
+  replace it with
+
+
+  .. code-block:: lua
+       
+       
+      local index=1;
+      local FailCount=0;
+      local Edge=false; --only if you use edge detection
+      function module.Run()
+      local PlatY = module.ManuPlats[index*2] --set manuplats in module
+      local PlatX = module.ManuPlats[index*2-1]
+      local Player = GetPlayer();
+      local c=1
+      local moblist ={}
+      local Mobs = GetAllMobs()
+
+      if Mobs==nil then
+      print("No Mob in the Map!")
+      return 0
+      end
+      if module.ManuPlat==false then
+      for k, mob in pairs(Mobs) do
+      if  mob.invisible==false then 
+      moblist[c]={}       
+      moblist[c].x=mob.x
+      moblist[c].y=mob.y
+      c=c+1
+      end
+      end
+      end
+
+      if module.ManuPlat==true then
+      for k, mob in pairs(Mobs) do
+      if  mob.invisible==false then
+      if mob.y == PlatY and  mob.x < PlatX+2000  and  mob.x > PlatX-2000 then    
+      moblist[c]={}       
+      moblist[c].x=mob.x
+      moblist[c].y=mob.y
+      c=c+1
+      end
+      end
+      end
+      end
+
+
+      if c==1 then
+      index= (index)%module.PlatCount+1
+      end
+      
+      
+- ``Step 2:`` Add modules up the top of hunt.lua and in your bootstrap as well.
+
+  .. code-block:: lua
+       
+    PlatCount = 2,
+    ManuPlat = true,
+    ManuPlats = {635, 305, 667, -235}, --X/Y
+    
