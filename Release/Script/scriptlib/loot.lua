@@ -96,6 +96,8 @@ local function TryLoot(Player, itemlist)
     
     local Looting = false
 
+    if itemlist==nil then return Looting end
+
      target,MustLoot=FindNearestItem(Player,itemlist)
      -- must loot
      if MustLoot ~=nil then
@@ -163,8 +165,7 @@ function module.Run()
     local Player = GetPlayer();
     local Looting=false
     local itemlist = GetAllDrops()
-    if itemlist==nil then return end
-
+    
     Looting = TryLoot(Player,itemlist)
 
     if Looting==true then
