@@ -26,6 +26,7 @@ Game Play
 			├── maxMp (int)
 			├── ani (int)
 			├── Orientation (int)
+			├── Mesos (int)
 			├── InAir  (bool)
 			├── OnRope (bool)
 			└── IsDead (bool)
