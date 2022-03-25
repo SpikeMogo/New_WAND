@@ -194,6 +194,7 @@ function module.Run()
 
     if Mobs==nil then
         print("No Mob in the Map!")
+        StopMove()
         return 0
     end
 

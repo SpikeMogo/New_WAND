@@ -163,6 +163,9 @@ local function HuntLootOrShopping(Player)
         else
             if module.IfMapRushToHunt then
                 MapRush(module.HuntMapList[HuntMapIdx].ID, module.MapRushMethod)
+                if module.MapRushMethod==2 then --VIP rock
+                    Delay(5000)
+                end
             else
                 walk.Walk(Player,module.HuntMapList[HuntMapIdx].ID)
             end
@@ -178,6 +181,9 @@ local function HuntLootOrShopping(Player)
         else
             if module.IfMapRushToStore then
                 MapRush(store.StoreMap, module.MapRushMethod)
+                if module.MapRushMethod==2 then --VIP rock
+                    Delay(5000)
+                end
             else
                 if module.IfUseScrollToTown then
                     UseReturnScroll()
