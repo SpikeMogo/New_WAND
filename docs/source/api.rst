@@ -637,9 +637,9 @@ Input
 		.. code-block:: lua
 
 			-- Hold Left key for 4 sec and release
-			SendKey(37, 1)
+			HoldKey(37, 1)
 			Delay(4000)
-			SendKey(37, 0)
+			HoldKey(37, 0)
 
 	:note:
 		* This function only works for ``left``, ``right``, ``up`` and ``down`` keys.
