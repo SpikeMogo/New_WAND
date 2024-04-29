@@ -37,7 +37,7 @@ You will get
 In the folder structure above:
 
 - ``Script`` contains example scripts
-- ``bmps`` should contain .bmp files used in imagine recognition 
+- ``bmps`` should contain .bmp files used in image recognition 
 - ``sound`` contains few sound effects WAND uses
 - ``discord_bot_dependency`` contains dependencies for discord_bot integration
 - ``ManualPortal.dat`` is where you add maplist/portal supplements
